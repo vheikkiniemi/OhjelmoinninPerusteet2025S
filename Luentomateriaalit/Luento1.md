@@ -692,7 +692,7 @@ Paradigmat eivät ole toisiaan poissulkevia. Esimerkiksi **Python ja JavaScript*
 | **Erittäin korkean tason kielet** | Abstraktioita vielä enemmän: lähinnä kuvaillaan *mitä* halutaan. | SQL, MATLAB            | Soveltuu erityistehtäviin.                |
 
 💡 Tulkinta:
-Korkean tason kielet piilottavat monimutkaisuutta (esim. muistin hallinnan), jotta opiskelija voi keskittyä ohjelman rakenteeseen ja logiikkaan.
+Korkean tason kielet piilottavat monimutkaisuutta (esim. muistin hallinnan), jotta voidaan keskittyä ohjelman rakenteeseen ja logiikkaan.
 
 ---
 
@@ -937,14 +937,6 @@ Harvoin ohjelma on valmis kerralla.
 | **4. Testaus ja debuggaus**      | Tarkistetaan virheet ja toimivuus                 | Testitapaus, virhe, debuggaus            | Luotettava ohjelma  |
 | **5. Dokumentointi ja ylläpito** | Tehdään ohjelma ymmärrettäväksi ja kehitettäväksi | Kommentit, dokumentaatio, versiohallinta | Käytettävä ohjelma  |
 | **6. Iteraatio**                 | Toistetaan prosessia kehittämiseksi               | Versiointi, parannukset                  | Parempi ohjelma     |
-
----
-
-Erinomaista, Ville 💪
-
-Nyt siirrytään **teoriasta käytäntöön** — askel askeleelta kuvaus siitä, **miten ohjelmointiprosessi etenee opiskelijan näkökulmasta**, kun käytössä on **Visual Studio Code (VS Code)**.
-
-Tämä on konkreettinen ja opetuksellisesti etenevä malli: opiskelija saa selkeän käsityksen *mitä tehdään, missä vaiheessa, ja miksi*.
 
 ---
 
