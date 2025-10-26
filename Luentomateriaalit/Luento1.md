@@ -20,7 +20,7 @@
   ```python
   name = input("Anna nimesi: ")   # Input
   message = f"Hei, {name}!"       # Process
-  print(message)                   # Output
+  print(message)                  # Output
   ```
 
 ---
