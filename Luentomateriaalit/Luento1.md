@@ -770,7 +770,7 @@ Tämä prosessi toistuu syklisesti — ohjelmat **kehitetään, testataan ja par
 
 **Tavoite:** ymmärtää, *mitä ongelmaa ohjelma ratkaisee*.
 
-### Käsitteitä:
+**Käsitteitä:**
 
 * **Vaatimusmäärittely (Requirements Specification):**
   Kirjallinen tai suullinen kuvaus siitä, mitä ohjelman täytyy pystyä tekemään.
@@ -793,7 +793,7 @@ Tämä prosessi toistuu syklisesti — ohjelmat **kehitetään, testataan ja par
 
 **Tavoite:** määrittää, *miten ongelma ratkaistaan* — ennen kuin kirjoitetaan koodia.
 
-### Käsitteitä:
+**Käsitteitä:**
 
 * **Algoritmi:**
   Tarkka, askel askeleelta etenevä menetelmä ongelman ratkaisuun.
@@ -824,7 +824,7 @@ Tämä prosessi toistuu syklisesti — ohjelmat **kehitetään, testataan ja par
 
 **Tavoite:** muuttaa suunnitelma ohjelmointikielelle.
 
-### Käsitteitä:
+**Käsitteitä:**
 
 * **Syntaksi:**
   Ohjelmointikielen kielioppi — miten käskyt kirjoitetaan oikein.
@@ -855,7 +855,7 @@ print("Keskiarvo:", average(scores))
 
 **Tavoite:** varmistaa, että ohjelma toimii oikein kaikissa tilanteissa.
 
-### Käsitteitä:
+**Käsitteitä:**
 
 * **Virhe (Error):**
   Ohjelman toiminnan estävä ongelma. Kolme yleistä tyyppiä:
@@ -887,7 +887,7 @@ def test_average():
 
 **Tavoite:** varmistaa, että ohjelmaa voidaan käyttää, ymmärtää ja kehittää myöhemmin.
 
-### Käsitteitä:
+**Käsitteitä:**
 
 * **Koodikommentit:**
   Lyhyitä selityksiä koodin sisällä (`# Tämä laskee keskiarvon`).
@@ -946,7 +946,7 @@ Harvoin ohjelma on valmis kerralla.
 
 **Tavoite:** luoda ympäristö, jossa ohjelmointia voi tehdä tehokkaasti ja virheettömästi.
 
-### Käsitteitä:
+**Käsitteitä:**
 
 * **IDE (Integrated Development Environment):**
   Työkalu, joka yhdistää tekstieditorin, virheentarkistuksen, versionhallinnan ja terminaalin yhteen paikkaan.
@@ -984,7 +984,7 @@ Harvoin ohjelma on valmis kerralla.
 
 **Tavoite:** aloittaa varsinainen ohjelmointityö järjestelmällisesti.
 
-### Käsitteitä:
+**Käsitteitä:**
 
 * **Projekti:**
   Kokoelma tiedostoja, jotka liittyvät samaan ohjelmaan (koodi, kuvat, data, README jne.).
@@ -1015,7 +1015,7 @@ Harvoin ohjelma on valmis kerralla.
 
 **Tavoite:** muuttaa idea toimivaksi ohjelmaksi.
 
-### Käsitteitä:
+**Käsitteitä:**
 
 * **Algoritmi:**
   Askelsarja, joka määrittää, miten ongelma ratkaistaan.
@@ -1050,7 +1050,7 @@ Harvoin ohjelma on valmis kerralla.
 
 **Tavoite:** varmistaa, että ohjelma toimii kaikissa olosuhteissa.
 
-### Käsitteitä:
+**Käsitteitä:**
 
 * **Syntaksivirhe:** kirjoitusvirhe, joka estää ohjelman ajamisen.
 * **Ajonaikainen virhe:** ohjelma kaatuu kesken suorituksen.
@@ -1080,7 +1080,7 @@ Harvoin ohjelma on valmis kerralla.
 
 **Tavoite:** tehdä koodista ymmärrettävää ja säilyttää sen historia.
 
-### Käsitteitä:
+**Käsitteitä:**
 
 * **Kommentti:**
   Ihmisen luettava selite, joka ei vaikuta ohjelman toimintaan.
@@ -1120,7 +1120,7 @@ Harvoin ohjelma on valmis kerralla.
 
 **Tavoite:** muuttaa yksinkertainen ohjelma monipuolisemmaksi.
 
-### Käsitteitä:
+**Käsitteitä:**
 
 * **Versiointi:** ohjelman eri kehitysvaiheiden hallinta (v1.0, v1.1, v2.0).
 * **Refaktorointi:** koodin rakenteen parantaminen ilman, että sen toiminta muuttuu.
