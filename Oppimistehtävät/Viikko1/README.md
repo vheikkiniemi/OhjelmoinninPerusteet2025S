@@ -180,7 +180,7 @@ Lisää palautukseen myös lyhyt teksti:
 
 ## 💬 Hyvä fiilis tekemiseen!
 
-Muista: kaikki ohjelmoijat aloittavat jostain.
+**Muista:** kaikki ohjelmoijat aloittavat jostain.
 Tärkeintä ei ole täydellinen koodi, vaan **oppiminen, kokeilu ja oivallus**.
 Pidä hauskaa ja tutki, miten pieni skripti voi kehittyä vaihe vaiheelta suuremmaksi kokonaisuudeksi! 🚀💡😎
 
