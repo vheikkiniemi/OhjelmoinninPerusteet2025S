@@ -137,7 +137,7 @@ Avaa VS Coden terminaali ja suorita komennot peräkkäin:
 
 ```bash
 cd versio1_yksinkertainen
-python yksinkertainen_sana.py
+python tulosta_sana_v1.py
 ````
 
 ```bash
