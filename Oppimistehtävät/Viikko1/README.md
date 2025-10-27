@@ -5,15 +5,11 @@
 
 ## 🎯 Tehtävän tavoite
 
-Tässä tehtävässä tutustut ohjelmoinnin ja kehitysympäristön perusasioihin.
+* Tässä tehtävässä tutustut ohjelmoinnin ja kehitysympäristön perusasioihin.
 Opit käyttämään **Visual Studio Codea**, **Pythonia** ja **Git-versionhallintaa**.
-
-Lisäksi tutustut koodin kehitykseen askel askeleelta:  
-👉 yksinkertaisesta versiosta kohti virallista ja ammattimaisempaa ohjelmaa. 
-
-Valmiin Python-koodin avulla luet tiedoston, jossa on **yksi sana**, ja ohjelma tulostaa sen **konsoliin**.
-
-Lopuksi jaat koodin omaan GitHub-repoosi ja kuittaat tehtävän tehdyksi **Itslearningiin**.
+* Lisäksi tutustut koodin kehitykseen askel askeleelta: 👉 yksinkertaisesta versiosta kohti virallista ja ammattimaisempaa ohjelmaa. 
+* Valmiin Python-koodin avulla luet tiedoston, jossa on **yksi sana**, ja ohjelma tulostaa sen **konsoliin**.
+* Lopuksi jaat koodin omaan GitHub-repoosi ja kuittaat tehtävän tehdyksi **Itslearningiin**.
 
 > [!NOTE]
 > Halutessa työn voi tehdä pareittain. Tällöin kohdassa [Palautusohje Itslearningiin](#-palautusohje-itslearningiin) pari tekee vain yhden palautuksen, johon on yhdistetty molemmat.
