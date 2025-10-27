@@ -113,7 +113,7 @@ nothing to commit, working tree clean
 ### 📤 4️⃣ Lisää tai kopioi kansiot ja tiedostot projektiin
 
 * Lisää kansiot ja tiedostot, esim. ladatut koodiversiot (`v1_…`, `v2_…`, jne.)
-> Katso Projektin kansiorakenne
+> Katso [Projektin kansiorakenne](#-projektin-rakenne)
 * Tee commit ja lähetä muutokset GitHubiin (Onnistuu myös Visual Studio Codesta graafisesti):
 
 ```bash
