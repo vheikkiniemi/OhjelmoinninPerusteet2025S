@@ -1,3 +1,6 @@
+> [!NOTE]
+> Materiaali on luotu ChatGPT:n ja Copilotin avulla.
+
 # 🧩 Miksi ohjelmissa tarvitaan erilaisia tietotyyppejä?
 
 ## 1. Mitä tietotyyppi tarkoittaa?
@@ -120,8 +123,8 @@ Käyttäjän nimi, sähköposti ja tunnus tallennetaan tekstinä (merkkijonona).
 Jos käyttäjällä on ikä tai tunnistenumero, ne ovat kokonaislukuja.
 
 ```python
-user_name = "John Doe"        # str
-user_email = "john@doe.com"   # str
+user_name = "Mika Virtanen"        # str
+user_email = "mika@virtanen.com"   # str
 user_age = 22                 # int
 ```
 
@@ -188,7 +191,7 @@ Tai listana olioita / sanakirjoja, jos halutaan säilyttää enemmän tietoa:
 
 ```python
 reservations = [
-    {"user": "John", "resource": "Kokoushuone A", "time": "14:00-16:00"},
+    {"user": "Mika", "resource": "Kokoushuone A", "time": "14:00-16:00"},
     {"user": "Satu", "resource": "Kokoushuone B", "time": "12:00-13:00"}
 ]
 ```
@@ -201,7 +204,7 @@ Yksittäisen varauksen kaikki tiedot voidaan koota yhteen sanakirjaan:
 
 ```python
 reservation = {
-    "user_name": "John Doe",   # str
+    "user_name": "Mika Virtanen",   # str
     "resource": "Kokoushuone A",       # str
     "start": datetime(2025, 10, 30, 14, 0),  # datetime
     "end": datetime(2025, 10, 30, 16, 0),
@@ -218,7 +221,7 @@ reservation = {
 
 | Tietotyyppi | Käyttötarkoitus                      | Esimerkki                               |
 | ----------- | ------------------------------------ | --------------------------------------- |
-| `str`       | Nimet, sähköpostit, resurssien nimet | `"John Doe"`, `"Kokoushuone A"` |
+| `str`       | Nimet, sähköpostit, resurssien nimet | `"Mika Virtanen"`, `"Kokoushuone A"` |
 | `int`       | Ikä, kapasiteetti, tunnisteet        | `22`, `10`, `12345`                     |
 | `float`     | Hinta tai tuntimäärä                 | `2.5` tuntia                            |
 | `bool`      | Onko varaus vahvistettu, peruttu     | `True`, `False`                         |
@@ -245,7 +248,7 @@ Kun varausjärjestelmä käyttää **oikeita tietotyyppejä**, ohjelma toimii oi
 from datetime import datetime
 
 reservation = {
-    "user_name": "John Doe",
+    "user_name": "Mika Virtanen",
     "resource": "Kokoushuone A",
     "start": datetime(2025, 10, 30, 14, 0),
     "end": datetime(2025, 10, 30, 16, 0),
@@ -264,7 +267,7 @@ Varaus: Kokoushuone A klo 14:00–16:00
 
 ---
 
-# 🧩 Pythonin tietotyypit käytännön esimerkeillä
+# 🧩 Pythonin tietotyypit esimerkeillä
 
 Pythonissa kaikki on olioita — myös tietotyypit.
 Tietotyyppi kertoo, **millaista tietoa muuttuja sisältää** ja **miten sitä voidaan käsitellä**.
@@ -285,7 +288,7 @@ print(year - 2000)  # 25
 print(students * 2) # 64
 ```
 
-💡 **Käyttö:** laskurit, iät, määrät, tunnisteet
+💡 **Käyttö:** laskurit, iät, määrät, tunnisteet  
 📏 **Esimerkki:** käyttäjän ikä, varattujen paikkojen määrä
 
 ---
@@ -304,7 +307,7 @@ print(temperature + 2.0)  # 23.5
 print(price * 2)          # 19.98
 ```
 
-💡 **Käyttö:** hinnat, mittaukset, prosentit
+💡 **Käyttö:** hinnat, mittaukset, prosentit  
 📏 **Esimerkki:** varauksen kesto tunneissa
 
 ---
@@ -321,7 +324,7 @@ print(z.imag)  # 4.0
 print(z * 2)   # (6+8j)
 ```
 
-💡 **Käyttö:** sähkötekniikka, fysiikka, signaalinkäsittely
+💡 **Käyttö:** sähkötekniikka, fysiikka, signaalinkäsittely  
 📏 **Esimerkki:** jännitteen ja virran kompleksimuodot
 
 ---
@@ -339,7 +342,7 @@ print("Tervetuloa, " + name + "!")
 print(f"Varaus tehty tilaan {room}.")
 ```
 
-💡 **Käyttö:** nimet, sähköpostit, tekstitiedot
+💡 **Käyttö:** nimet, sähköpostit, tekstitiedot  
 📏 **Esimerkki:** resurssin nimi, käyttäjän sähköposti
 
 ---
@@ -358,7 +361,7 @@ else:
     print("Varaus odottaa hyväksyntää ❌")
 ```
 
-💡 **Käyttö:** päätökset, ehdot, loogiset tarkistukset
+💡 **Käyttö:** päätökset, ehdot, loogiset tarkistukset  
 📏 **Esimerkki:** onko käyttäjä yli 15-vuotias
 
 ---
@@ -375,7 +378,7 @@ reservations.append("D")
 print(reservations)     # ["A", "B", "C", "D"]
 ```
 
-💡 **Käyttö:** useiden arvojen tallennus, toistuvat rakenteet
+💡 **Käyttö:** useiden arvojen tallennus, toistuvat rakenteet  
 📏 **Esimerkki:** lista kaikista varauksista
 
 ---
@@ -394,7 +397,7 @@ reservation = {
 print(reservation["user"])  # Mika Virtanen
 ```
 
-💡 **Käyttö:** tietorakenteet, API-data, tietokantaobjektit
+💡 **Käyttö:** tietorakenteet, API-data, tietokantaobjektit  
 📏 **Esimerkki:** yksittäinen varaus
 
 ---
@@ -410,7 +413,7 @@ print(time_slot[0])  # 14:00
 # time_slot[0] = "13:00"  # ❌ Virhe
 ```
 
-💡 **Käyttö:** pysyvät arvot, koordinaatit, aikavälit
+💡 **Käyttö:** pysyvät arvot, koordinaatit, aikavälit  
 📏 **Esimerkki:** varauksen alku- ja loppuaika
 
 ---
@@ -427,7 +430,7 @@ resources.add("C")
 print(resources)  # {"A", "B", "C"}
 ```
 
-💡 **Käyttö:** duplikaattien poistaminen, joukko-operaatiot
+💡 **Käyttö:** duplikaattien poistaminen, joukko-operaatiot  
 📏 **Esimerkki:** uniikit resurssit
 
 ---
@@ -455,7 +458,7 @@ for i in range(3):
 # 0, 1, 2
 ```
 
-💡 **Käyttö:** toistolauseet, laskurit
+💡 **Käyttö:** toistolauseet, laskurit  
 📏 **Esimerkki:** tuntien läpikäynti varauspäivänä
 
 ---
@@ -489,7 +492,7 @@ if result is None:
     print("Ei tulosta vielä saatavilla.")
 ```
 
-💡 **Käyttö:** palautusarvot, alustamattomat muuttujat
+💡 **Käyttö:** palautusarvot, alustamattomat muuttujat  
 📏 **Esimerkki:** varaus ei ole vielä vahvistettu → `confirmed = None`
 
 ---
