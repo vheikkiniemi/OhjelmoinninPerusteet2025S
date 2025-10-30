@@ -235,10 +235,10 @@ reservation = {
 
 Kun varausjärjestelmä käyttää **oikeita tietotyyppejä**, ohjelma toimii oikein ja luotettavasti:
 
-* Päällekkäiset varaukset voidaan estää ajallisesti (`datetime`)   
-* Käyttäjän tunnistaminen onnistuu tekstin perusteella (`str`)   
-* Kapasiteettia voidaan verrata numeroina (`int`)   
-* Varauslogiikka toimii selkeästi (`bool`)   
+ * Päällekkäiset varaukset voidaan estää ajallisesti (`datetime`)   
+ * Käyttäjän tunnistaminen onnistuu tekstin perusteella (`str`)   
+ * Kapasiteettia voidaan verrata numeroina (`int`)   
+ * Varauslogiikka toimii selkeästi (`bool`)   
 
 ---
 
@@ -552,10 +552,11 @@ Varaus odottaa vahvistusta ⏳
 
 ## ✨ Yhteenveto
 
-Pythonin tietotyypit kattavat kaiken:
-🔹 Numerot (`int`, `float`, `complex`)
-🔹 Teksti ja logiikka (`str`, `bool`)
-🔹 Kokoelmat (`list`, `tuple`, `set`, `dict`)
+Pythonin tietotyypit kattavat kaiken:  
+
+🔹 Numerot (`int`, `float`, `complex`)  
+🔹 Teksti ja logiikka (`str`, `bool`)  
+🔹 Kokoelmat (`list`, `tuple`, `set`, `dict`)  
 🔹 Erikoistapaukset (`range`, `bytes`, `NoneType`, `frozenset`)
 
 > 🎯 Kun osaat valita oikean tietotyypin, ohjelmasi on nopeampi, virheettömämpi ja helpompi ymmärtää.
