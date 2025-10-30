@@ -235,9 +235,9 @@ reservation = {
 
 Kun varausjärjestelmä käyttää **oikeita tietotyyppejä**, ohjelma toimii oikein ja luotettavasti:
 
-* Päällekkäiset varaukset voidaan estää ajallisesti (`datetime`)
-* Käyttäjän tunnistaminen onnistuu tekstin perusteella (`str`)
-* Kapasiteettia voidaan verrata numeroina (`int`)
+* Päällekkäiset varaukset voidaan estää ajallisesti (`datetime`)  
+* Käyttäjän tunnistaminen onnistuu tekstin perusteella (`str`)  
+* Kapasiteettia voidaan verrata numeroina (`int`)  
 * Varauslogiikka toimii selkeästi (`bool`)
 
 ---
