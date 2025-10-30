@@ -141,17 +141,17 @@ python tulosta_sana_v1.py
 ````
 
 ```bash
-cd ../versio2_main
+cd ..\versio2_main
 python tulosta_sana_v2.py
 ```
 
 ```bash
-cd ../versio3_virhekasittely
+cd ..\versio3_virhekasittely
 python tulosta_sana_v3.py
 ```
 
 ```bash
-cd ../versio4_virallinen
+cd ..\versio4_virallinen
 python tulosta_sana_v4.py
 # tai:
 python tulosta_sana_v4.py --tiedosto sana.txt
