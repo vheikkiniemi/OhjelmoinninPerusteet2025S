@@ -107,7 +107,7 @@ Sähköposti: anna.virtanen@example.com
 
 ## 🚀 Bonustehtävää (valinnaisia)
 
-💎 **A)** Muuta hinnat suomalaiseen desimaalimuotoon 19.95 → 19,95
+💎 **A)** Muuta hinnat suomalaiseen desimaalimuotoon 19.95 → 19,95  
 💎 **B)** Muuta tiedoston `varaukset.txt` sisältöä ja testaa, että tulostus on oikea  
 💎 **C)** Tulosta tuntimäärän perusteella varauksen lopppumisaika  
 💎 **D)** Lisää tiedostoon `varaukset.txt` useampi varaus ja tulosta kaikki rivit tiedostosta.  
