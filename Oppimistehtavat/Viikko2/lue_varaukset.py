@@ -4,7 +4,7 @@ ja tulostaa ne konsoliin. Alla esimerkkitulostus:
 
 Varausnumero: 123
 Varaaja: Anna Virtanen
-Päivämäärä: 2025-10-31
+Päivämäärä: 31.10.2025
 Aloitusaika: 10:00
 Tuntimäärä: 2
 Tuntihinta: 19.95 €
