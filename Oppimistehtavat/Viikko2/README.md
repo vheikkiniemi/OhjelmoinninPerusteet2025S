@@ -59,7 +59,7 @@ Rivillä on seuraavat tiedot:
 Varausnumero: 123
 Varaaja: Anna Virtanen
 Päivämäärä: 31.10.2025
-Aloitusaika: 10:00
+Aloitusaika: 10.00
 Tuntimäärä: 2
 Tuntihinta: 19.95 €
 Kokonaishinta: 39.9 €
@@ -88,6 +88,7 @@ Sähköposti: anna.virtanen@example.com
   paiva = datetime.strptime(varaus[2], "%Y-%m-%d").date()
   suomalainenPaiva = paiva.strftime("%d.%m.%Y")
   aika = datetime.strptime(varaus[3], "%H:%M").time()
+  suomalainenAika = aika.strftime("%H.%M")
   ```
 
 > [!TIP]
@@ -106,12 +107,13 @@ Sähköposti: anna.virtanen@example.com
 
 ## 🚀 Bonustehtävää (valinnaisia)
 
-💎 **A)** Muuta tiedoston `varaukset.txt` sisältöä ja testaa, että tulostus on oikea  
-💎 **B)** Tulosta tuntimäärän perusteella varauksen lopppumisaika  
-💎 **C)** Lisää tiedostoon `varaukset.txt` useampi varaus ja tulosta kaikki rivit tiedostosta.  
-💎 **D)** Laske kaikkien varausten yhteishinta.  
-💎 **E)** Tulosta vain ne varaukset, joita ei ole vielä maksettu.  
-💎 **F)** Tulosta vain ne varaukset, jotka alkavat klo 8–12 välillä.  
+💎 **A)** Muuta hinnat suomalaiseen desimaalimuotoon 19.95 → 19,95
+💎 **B)** Muuta tiedoston `varaukset.txt` sisältöä ja testaa, että tulostus on oikea  
+💎 **C)** Tulosta tuntimäärän perusteella varauksen lopppumisaika  
+💎 **D)** Lisää tiedostoon `varaukset.txt` useampi varaus ja tulosta kaikki rivit tiedostosta.  
+💎 **E)** Laske kaikkien varausten yhteishinta.  
+💎 **F)** Tulosta vain ne varaukset, joita ei ole vielä maksettu.  
+💎 **G)** Tulosta vain ne varaukset, jotka alkavat klo 8–12 välillä.  
 
 ---
 
