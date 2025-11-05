@@ -78,6 +78,9 @@ Sähköposti: anna.virtanen@example.com
   ```python
   varaus = varaus.split('|')
   ```
+> [!NOTE]
+> Jos et tee edellistä, niin alla olevissa esimerkeissä → `varaus[0]` on sama kuin `varaus.split('|')[0]`
+
 * Muunna tietotyypit. Seuraavassa muutama esimerkki:
 
   ```python
