@@ -83,7 +83,7 @@ Sähköposti: anna.virtanen@example.com
   ```python
   varausnumero = int(varaus[0])
   tuntihinta = float(varaus[5])
-  maksettu = varaus[6].strip() == "True"
+  maksettu = bool(varaus[6])
   ```
 * Päivämäärän ja aloitusajan voi muuntaa `datetime`-muotoon:
 
