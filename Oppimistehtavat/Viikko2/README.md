@@ -38,7 +38,7 @@ Rivillä on seuraavat tiedot:
 | ------ | -------------- | --------------------------- |
 | 1      | Varausnumero   | `int`                       |
 | 2      | Varaajan nimi  | `str`                       |
-| 3      | Varauspäivä    | `datetime`                  |
+| 3      | Varauspäivä    | `datetime.date`                  |
 | 4      | Aloitusaika    | `datetime.time`             |
 | 5      | Tuntimäärä     | `int`                       |
 | 6      | Tuntihinta (€) | `float`                     |
@@ -73,7 +73,11 @@ Sähköposti: anna.virtanen@example.com
 
 ### 🧩 Vihjeitä
 
-* Pilko rivi `split('|')`-metodilla → tuottaa listatyyppisen muuttujan
+* Pilko rivi `split('|')`-metodilla seuraavan esimerkin mukaisesti → tuottaa listatyyppisen muuttujan (seuraavat esimerkit toimivat)
+
+  ```python
+  varaus = varaus.split('|')
+  ```
 * Muunna tietotyypit. Seuraavassa muutama esimerkki:
 
   ```python
