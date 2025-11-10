@@ -93,12 +93,12 @@ print(hedelmät)
 
 ## 🧭 Yhteenveto
 
-* **Funktio**: Yleinen, irrallinen toiminto → esim. `print()`
+* **Funktio**: Yleinen, irrallinen toiminto → esim. `print()`  
 * **Metodi**: Olioon sidottu toiminto → esim. `"teksti".split()`
 
 💬 Voit ajatella näin:
 
-> Funktio on kuin työkalu työkalupakissa.
+> Funktio on kuin työkalu työkalupakissa.  
 > Metodi on kuin työkalu, joka on kiinteä osa jotakin konetta.
 
 ---
@@ -171,7 +171,7 @@ tervehdi("Ville")
 Hei, Ville!
 ```
 
-🧩 *Parametri* on muuttuja funktion määrittelyssä.
+🧩 *Parametri* on muuttuja funktion määrittelyssä.  
 🧩 *Argumentti* on arvo, joka annetaan funktiolle kutsussa.
 
 ---
