@@ -1,7 +1,7 @@
 > [!NOTE]
 > Materiaali on luotu ChatGPT:n ja Copilotin avulla.
 
-# 🐍  Funktiot, tietotyypit ja tulostus varausjärjestelmässä
+# 🐍  Funktioiden käyttö
 
 ## 🎯 Tavoite
 
