@@ -8,8 +8,8 @@ Varaaja: Anna Virtanen
 Päivämäärä: 31.10.2025
 Aloitusaika: 10.00
 Tuntimäärä: 2
-Tuntihinta: 19.95 €
-Kokonaishinta: 39.9 €
+Tuntihinta: 19,95 €
+Kokonaishinta: 39,9 €
 Maksettu: Kyllä
 Kohde: Kokoustila A
 Puhelin: 0401234567
