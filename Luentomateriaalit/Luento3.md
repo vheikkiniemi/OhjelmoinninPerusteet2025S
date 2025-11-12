@@ -53,7 +53,7 @@ Metodia **kutsutaan olion kautta pisteoperaattorilla (. )**.
 * Metodi **toimii aina jonkin tietyn tietotyypin yhteydessä**.
 * Se **muokkaa tai käsittelee kyseistä oliota**.
 * Kutsutaan muodossa:
-  `olio.metodi(parametrit)`
+  `olio.metodi(argumentit)`
 
 ---
 
@@ -146,7 +146,7 @@ def tervehdi():
 tervehdi()
 ```
 
-🔹 Tässä `tervehdi()` on funktio, joka ei ota parametreja eikä palauta mitään — se vain **tulostaa** tekstin.
+🔍 Tässä `tervehdi()` on funktio, joka ei ota parametreja eikä palauta mitään — se vain **tulostaa** tekstin.
 
 ---
 
@@ -307,14 +307,14 @@ Hei maailma!
 
 ```python
 nimi = "Ville"
-ikä = 35
+ikä = 47
 print("Hei", nimi, "sinä olet", ikä, "vuotias.")
 ```
 
 **📤 Tulostus:**
 
 ```
-Hei Ville sinä olet 35 vuotias.
+Hei Ville sinä olet 47 vuotias.
 ```
 
 💡 Huomaa: `print()` lisää **automaattisesti välilyönnin** argumenttien väliin.
@@ -382,14 +382,14 @@ print("5 + 3 =", 5 + 3)
 
 ```python
 nimi = "Ville"
-ikä = 35
+ikä = 47
 print(f"Hei {nimi}, olet {ikä} vuotta vanha.")
 ```
 
 **📤 Tulostus:**
 
 ```
-Hei Ville, olet 35 vuotta vanha.
+Hei Ville, olet 47 vuotta vanha.
 ```
 
 💡 F-merkkijonot ovat erittäin hyödyllisiä, koska ne tekevät tulosteesta luettavamman ja selkeämmän.
@@ -495,7 +495,7 @@ print(hedelmät)
 ['omena', 'päärynä', 'banaani']
 ```
 
-🧠 `split()` jakaa merkkijonon osiin **välilyönnin** kohdalta, jos erottinta ei erikseen määritellä.
+🧠 `split()` jakaa merkkijonon osiin (`Listatyyppiseksi` 👉 Voidaan käyttää alkioita) **välilyönnin** kohdalta, jos erottinta ei erikseen määritellä.
 
 ---
 
@@ -537,8 +537,7 @@ print(sanat)
 
 ## 🔢 Rajoita jakokertojen määrä (`maxsplit`)
 
-`split()` voi ottaa toisen valinnaisen argumentin:
-👉 `maxsplit`, joka määrittää **kuinka monta kertaa jako tehdään**.
+`split()` voi ottaa toisen valinnaisen argumentin: 👉 `maxsplit`, joka määrittää **kuinka monta kertaa jako tehdään**.
 
 ```python
 teksti = "a b c d e"
@@ -658,9 +657,7 @@ print("".split())
 
 ---
 
-## 💬 Yhteenvetona
-
-🧠 `split()`:
+**🧠 `split()`:**
 
 * on **merkkijono-olioiden metodi**
 * **jakaa tekstin osiin** annetun erottimen perusteella

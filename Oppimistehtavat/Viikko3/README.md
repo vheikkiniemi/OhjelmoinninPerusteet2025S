@@ -9,7 +9,7 @@ Tehtävän tavoitteena on harjoitella:
 
 * funktioiden käyttöä Pythonissa
 * tietotyyppimuunnoksien tekoa funktioiden sisällä
-* ohjelman rakentatamista, joka lukee ja tulostaa varausrivin rakenteellisesti
+* ohjelman rakentamista, joka lukee ja tulostaa varausrivin rakenteellisesti
 
 > [!NOTE]
 > Halutessa työn voi tehdä **`pareittain (max. kaksi)`**. Tällöin kohdassa [Palautusohje Itslearningiin](#-palautusohje-itslearningiin) pari tekee vain yhden palautuksen, johon on yhdistetty molemmat.
@@ -20,11 +20,11 @@ Tehtävän tavoitteena on harjoitella:
 
 * Sinulle on annettu tekstitiedosto **`varaukset.txt`**, jossa oleva rivi sisältää yhden varauksen tiedot.  
 * Lisäksi sinulle on annettu Python-skripti **`lue_varaukset.py`**, joka lukee tiedostossa **`varaukset.txt`** olevat varaukset.  
-* Tietoja on eroteltu pystypalkilla `|`. → Ohjelmassa on rivillä 32 `varaus = varaus.split('|')` → käytössä listatyyppinen muuttuaja `varaus`
+* Tietoja on eroteltu pystypalkilla `|`. → Ohjelmassa on rivillä 32 `varaus = varaus.split('|')` → käytössä listatyyppinen muuttuja `varaus`
 
 ---
 
-Esimerkkirivi `varaukset.txt` tiedostossa:
+**Esimerkkirivi `varaukset.txt` tiedostossa:**
 
 ```
 123|Anna Virtanen|2025-10-31|10:00|2|19.95|True|Kokoustila A|0401234567|anna.virtanen@example.com
@@ -114,9 +114,7 @@ Lisää palautukseen myös lyhyt teksti:
 
 ## 💬 Hyvä fiilis tekemiseen!
 
-**Muista:** kaikki ohjelmoijat aloittavat jostain.
-Tärkeintä ei ole täydellinen koodi, vaan **oppiminen, kokeilu ja oivallus**.
-Pidä hauskaa ja tutki, miten ihan oikeita asioita ihan oikeasti tehdään! 🚀💡😎
+**Muista:** kaikki ohjelmoijat aloittavat jostain. Tärkeintä ei ole täydellinen koodi, vaan **oppiminen, kokeilu ja oivallus**. Pidä hauskaa ja tutki, miten ihan oikeita asioita ihan oikeasti tehdään! 🚀💡😎
 
 ---
 
