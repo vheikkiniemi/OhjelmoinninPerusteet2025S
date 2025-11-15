@@ -1,3 +1,11 @@
+# Copyright (c) 2025 Ville Heikkiniemi
+#
+# This code is licensed under the MIT License.
+# You are free to use, modify, and distribute this code,
+# provided that the original copyright notice is retained.
+#
+# See LICENSE file in the project root for full license information.
+
 """
 Ohjelma joka lukee tiedostossa olevat varaustiedot
 ja tulostaa ne konsoliin käyttäen funkitoita.
@@ -9,7 +17,7 @@ Päivämäärä: 31.10.2025
 Aloitusaika: 10.00
 Tuntimäärä: 2
 Tuntihinta: 19,95 €
-Kokonaishinta: 39,9 €
+Kokonaishinta: 39,90 €
 Maksettu: Kyllä
 Kohde: Kokoustila A
 Puhelin: 0401234567
