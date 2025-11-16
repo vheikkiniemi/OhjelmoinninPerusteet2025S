@@ -1,6 +1,44 @@
 > [!NOTE]
 > Materiaali on luotu ChatGPT:n ja Copilotin avulla.
 
+# 💡 Pythonin virallinen tyyliopas → PEP 8
+
+[PEP 8](https://peps.python.org/pep-0008/) on Pythonin virallinen *style guide*, joka määrittelee, miten Python-koodi tulisi kirjoittaa, jotta se olisi selkeää, luettavaa ja yhtenäistä. Oppaan tarkoitus on helpottaa yhteistyötä, vähentää virheitä ja tehdä koodista ammattimaisempaa.
+
+## 🔑 Keskeiset periaatteet
+
+* **Sisennys**
+  Käytä neljää välilyöntiä per taso. Ei tabulaattoreita (IDE-ympäristöt esim. Visual Studio Code muotoilee tabulaattorin automaattisesti neljäksi välilyönniksi).
+
+* **Rivien pituus**
+  Suositeltu maksimi on 79 merkkiä. Pitkät lausekkeet voi jakaa useille riveille.
+
+* **Tyhjät rivit**
+  Käytä tyhjiä rivejä loogisten kokonaisuuksien erottamiseen.
+
+* **Importit**
+  Importit kirjoitetaan tiedoston alkuun, yksi per rivi, järjestettynä standardikirjasto → kolmannen osapuolen kirjastot → omat moduulit.
+
+* **Nimeämiskäytännöt**
+
+  * funktiot ja muuttujat: `lowercase_with_underscores`
+  * luokat: `CapWords`
+  * vakioita muistuttavat: `UPPER_CASE`
+
+* **Asettelu ja välilyönnit**
+  Pidä välilyönnit selkeinä esimerkiksi operaattorien ympärillä (`a + b`), mutta vältä turhia välilyöntejä sulkeiden sisällä.
+
+* **Kommentit ja dokumentointi**
+  Kommenttien tulee olla ymmärrettäviä ja ajantasaisia. Docstringit kirjoitetaan kolmella lainausmerkillä toimintoja, luokkia ja moduuleja varten.
+
+## 🎯 Miksi PEP 8 on tärkeä?
+
+* Parantaa koodin **luettavuutta** ja **ylläpidettävyyttä**.
+* Tekee yhteistyöstä **sujuvampaa**, koska kaikki noudattavat samoja sääntöjä.
+* Luo pohjan **ammattimaiselle Python-kehitykselle**.
+
+---
+
 # 🧠 **Muuttujat ja laskuoperaatiot**
 
 ## 1️⃣ Mitä muuttuja tarkoittaa?
