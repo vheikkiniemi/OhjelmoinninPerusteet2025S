@@ -1,7 +1,7 @@
 > [!NOTE]
 > Materiaali on luotu ChatGPT:n ja Copilotin avulla
 
-# 🐍 Varaustietojen käsitty (Osa A & B)
+# 🐍 Varaustietojen käsitty (Osa A ja B)
 
 ## 🎯 Tavoite
 
