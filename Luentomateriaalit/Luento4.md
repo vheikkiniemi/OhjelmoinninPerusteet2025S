@@ -63,9 +63,9 @@ temperature = -3.5
 
 Python sallii seuraavat:
 
-✔ Kirjaimet
-✔ Numerot (ei alussa)
-✔ Alaviiva `_`
+✔ Kirjaimet  
+✔ Numerot (ei alussa)  
+✔ Alaviiva `_`  
 
 Hyviä käytäntöjä:
 
