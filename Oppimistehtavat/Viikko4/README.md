@@ -7,10 +7,8 @@
 
 Tehtävän tavoitteena on harjoitella:
 
-* tietotyyppimuunnoksia Pythonissa
-* `datetime`-kirjaston käyttöä (`datetime.date`, `datetime.time`, `datetime.datetime`)
+* tietotyyppimuunnoksia Pythonisssa käyttäen erillistä funkiota
 * listojen käsittelyä ja varausdatan rakenteistamista
-* koodin jakamista selkeään funktioon (`muunna_varaustiedot`)
 
 > [!NOTE]
 > Halutessa työn voi tehdä **`pareittain (max. kaksi)`**. Tällöin kohdassa [Palautusohje Itslearningiin](#-palautusohje-itslearningiin) pari tekee vain yhden palautuksen, johon on yhdistetty molemmat.
@@ -130,6 +128,8 @@ return [
 ]
 ```
 
+---
+
 ### 3️⃣ Testaus
 
 Varmista, että ohjelma käynnistyy komennolla → `ohjelma tulostaa varaukset ja muutetut tietotyypit`:
@@ -175,7 +175,7 @@ Osa B täydentää tämän viikon tehtävää:
 ## 📤 Palautusohje Itslearningiin
 
 > [!WARNING]
-> **Tätä vaihetta ei vielä tehdä.**
+> **Tätä vaihetta ei vielä tehdä (eli palautusta).**
 > Viikon 4 tehtävän **lopullinen palautus** (Osa A + Osa B) tehdään, kun Osa B on julkaistu.
 
 Myöhemmin, kun Osa B on valmis, palautusohje on muodoltaan samantapainen kuin edellisellä viikolla:
