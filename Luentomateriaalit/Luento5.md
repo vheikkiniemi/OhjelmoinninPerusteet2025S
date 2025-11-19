@@ -98,7 +98,7 @@ for avain, arvo in user.items():
 ## ⏳ `while`-silmukka → ehto-ohjattu toisto
 
 > [!NOTE]
-> 💡 Opettele tämä! → Ehdon täytyttyä suorittaminen lopetetaan.
+> 💡 Opettele tämä! **→ Ehdon täytyttyä suorittaminen lopetetaan.**
 
 ```py
 saldo = 3
@@ -166,6 +166,8 @@ squared = []
 for n in numbers:
     squared.append(n*n)
 ```
+
+---
 
 **✨ List comprehension (lyhyempi ja usein nopeampi)**
 
