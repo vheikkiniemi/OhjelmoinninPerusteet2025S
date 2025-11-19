@@ -22,24 +22,26 @@ int | str | str | str | date | time | int | float | bool | str | datetime
 from datetime import datetime
 
 def muunna_varaustiedot(varaus: list) -> list:
+    #print(varaus)
     # Tähän tulee siis varaus oletustietotyypeillä (str)
     # Varauksessa on 11 saraketta -> Lista -> Alkiot 0-10
     # Muuta tietotyypit haluamallasi tavalla -> Seuraavassa esimerkki ensimmäisestä alkioista
-    muutettuvaraus = []
+    muutettu_varaus = []
     # Ensimmäisen alkion = varaus[0] muunnos
-    muutettuvaraus.append(int(varaus[0]))
+    muutettu_varaus.append(int(varaus[0]))
     # Ja tästä jatkuu
-    muutettuvaraus.append("")
-    muutettuvaraus.append("")
-    muutettuvaraus.append("")
-    muutettuvaraus.append("")
-    muutettuvaraus.append("")
-    muutettuvaraus.append("")
-    muutettuvaraus.append("")
-    muutettuvaraus.append("")
-    muutettuvaraus.append("")
-    muutettuvaraus.append("")
-    return muutettuvaraus
+    muutettu_varaus.append(varaus[1])
+    muutettu_varaus.append(varaus[2])
+    muutettu_varaus.append(varaus[3])
+    muutettu_varaus.append(datetime.strptime(varaus[4], "%Y-%m-%d").date())
+    muutettu_varaus.append("")
+    muutettu_varaus.append(int(varaus[6]))
+    muutettu_varaus.append(float(varaus[7]))
+    muutettu_varaus.append(varaus[8].lower() == "true")
+    muutettu_varaus.append(varaus[9])
+    muutettu_varaus.append("")
+    return muutettu_varaus
+    #return [int(varaus[0]), ]
 
 def hae_varaukset(varaustiedosto: str) -> list:
     # HUOM! Tälle funktioille ei tarvitse tehdä mitään!
