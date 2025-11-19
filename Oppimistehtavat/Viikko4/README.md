@@ -80,7 +80,7 @@ Skriptissä on funktio nimeltä **`muunna_varaustiedot`**, joka saa parametrina 
 ```text
 varausId | nimi | sähköposti | puhelin | varauksenPvm | varauksenKlo | varauksenKesto | hinta | varausVahvistettu | varattuTila | varausLuotu
 
-int | str | str | str | datetime.date | datetime.time | int | float | bool | str | datetime
+int | str | str | str | date | time | int | float | bool | str | datetime
 ```
 
 > [!TIP]
