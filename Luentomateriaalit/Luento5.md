@@ -1,14 +1,14 @@
 > [!NOTE]
 > Materiaali on luotu ChatGPT:n ja Copilotin avulla.
 
-# 🐍 Silmukat Pythonissa 🚀
+# 🐍 Silmukat Pythonissa
 
-## 🔁 1) Mikä on silmukka?
+## 🔁 Mikä on silmukka?
 
 Silmukka toistaa saman koodilohkon useita kertoja.
 
 > [!NOTE]
-> Ohjelma on itsessään jo silmukka. Pythonin `Main`-osasta käytetään nimeä pääsilmukka. `Main` voidaan suorittaa riviltä ja lopettaa suorittaminen viimeisen rivin jälkeen. Usein ohjelmat ovat kuitenkin sellaisia, että `Mainin` suorittaminen lopetetaan vasta erillisellä keskeytyksellä alla olevan esimerkin mukaisesti:
+> 💡 Ohjelma on itsessään jo silmukka. Pythonin `Main`-osasta käytetään nimeä pääsilmukka. `Main` voidaan suorittaa riviltä ja lopettaa suorittaminen viimeisen rivin jälkeen. Usein ohjelmat ovat kuitenkin sellaisia, että `Mainin` suorittaminen lopetetaan vasta erillisellä keskeytyksellä alla olevan esimerkin mukaisesti:
 
 ```py
 import time
@@ -37,7 +37,7 @@ Pythonissa tärkeimmät silmukat ovat:
 
 ---
 
-## 🧩 2) `for`-silmukka käytännössä
+## 🧩 `for`-silmukka käytännössä
 
 **✅ Perusmuoto**
 
@@ -45,6 +45,8 @@ Pythonissa tärkeimmät silmukat ovat:
 for nimi in ["Anna", "Bashir", "Chen"]:
     print(f"Hei {nimi}!")
 ```
+
+---
 
 **🔢 `range()` → kokonaislukuvälit**
 
@@ -56,16 +58,20 @@ for i in range(2, 10, 2):   # 2,4,6,8
     print(i)
 ```
 
+---
+
 **🧮 `enumerate()` → sekä indeksi että arvo**
 
 > [!NOTE]
-> Opettele tämä! → Listojen kanssa mainio
+> 💡 Opettele tämä! → Listojen kanssa mainio
 
 ```py
 opiskelijat = ["Aino", "Ben", "Cai"]
 for idx, nimi in enumerate(opiskelijat, start=1):
     print(idx, nimi)
 ```
+
+---
 
 **🔗 `zip()` → kulje rinnakkain useita jonoja**
 
@@ -77,6 +83,8 @@ for u, r in zip(usernames, roles):
     print(f"{u} → {r}")
 ```
 
+---
+
 **🗂 Iterointi sanakirjan yli**
 
 ```py
@@ -87,10 +95,10 @@ for avain, arvo in user.items():
 
 ---
 
-## ⏳ 3) `while`-silmukka → ehto-ohjattu toisto
+## ⏳ `while`-silmukka → ehto-ohjattu toisto
 
 > [!NOTE]
-> Opettele tämä! → Ehdon täytyttyä suorittaminen lopetetaan.
+> 💡 Opettele tämä! → Ehdon täytyttyä suorittaminen lopetetaan.
 
 ```py
 saldo = 3
@@ -104,7 +112,7 @@ print("Ei käyttöoikeutta.")
 
 ---
 
-## 🧭 4) `break`, `continue` ja silmukan `else`
+## 🧭 `break`, `continue` ja silmukan `else`
 
 * 🛑 **`break`** keskeyttää silmukan heti  
 * ⏩ **`continue`** hyppää seuraavaan iteraatioon  
@@ -133,7 +141,7 @@ for r in rivit:
 
 ---
 
-## 🧱 5) Sisäkkäiset silmukat (nested loops)
+## 🧱 Sisäkkäiset silmukat (nested loops)
 
 ```py
 päivät = ["Ma", "Ti"]
@@ -148,7 +156,7 @@ for p in päivät:
 
 ---
 
-## ⚡ 6) Listan läpikäynti vs. list comprehension
+## ⚡ Listan läpikäynti vs. list comprehension
 
 **🧠 Perinteinen**
 
@@ -169,7 +177,7 @@ evens = [n for n in numbers if n % 2 == 0]
 
 ---
 
-## 🧠 7) Hyvät käytännöt
+## 🧠 Hyvät käytännöt
 
 ✅ Älä muokkaa listaa samalla kun iteroit
 ✅ Käytä `enumerate()` selkeyden vuoksi
@@ -177,7 +185,7 @@ evens = [n for n in numbers if n % 2 == 0]
 
 ---
 
-## 🧱 8) Tyypillisiä käyttöskenaarioita
+## 🧱 Tyypillisiä käyttöskenaarioita
 
 **🧮 Kertymä**
 
@@ -186,6 +194,8 @@ total = 0
 for price in [12.5, 8.0, 3.5]:
     total += price
 ```
+
+---
 
 **🔍 Haku**
 
@@ -197,12 +207,16 @@ for name in ["anna", "ben", "cai"]:
         break
 ```
 
+---
+
 **🎯 Suodatus**
 
 ```py
 emails = ["a@x.com", "virhe", "b@y.com"]
 valid = [e for e in emails if "@" in e]
 ```
+
+---
 
 **🧩 Rinnakkaiset listat**
 
@@ -215,31 +229,7 @@ for s, r in zip(starts, rooms):
 
 ---
 
-## 🏗️ 9) Käytännön esimerkki (varausrivit)
-
-```py
-rivit = [
-    "Ville|2025-11-11|08:00|huone101",
-    "Anna|2025-11-11|9:aa|lab-2",
-    "Chen|2025-11-11|10:00|huone202"
-]
-
-def valid_time(t):
-    hhmm = t.split(":")
-    return len(hhmm) == 2 and all(part.isdigit() for part in hhmm) and 0 <= int(hhmm[0]) < 24 and 0 <= int(hhmm[1]) < 60
-
-for r in rivit:
-    nimi, pvm, aika, kohde = r.split("|")
-    if not valid_time(aika):
-        continue
-    if not kohde.startswith("huone"):
-        continue
-    print(f"{pvm} {aika}: {nimi} → {kohde}")
-```
-
----
-
-## 🧾 10) Checklist ✅
+## 🧾 Checklist
 
 | Asia                                            | Osaaminen |
 | ----------------------------------------------- | --------- |
@@ -251,7 +241,7 @@ for r in rivit:
 
 ---
 
-## 🧠 11) Tiivistelmä → “muista nämä” 💡
+## 🧠 Tiivistelmä → **muista nämä**
 
 * `for`: käy läpi jono tai kokoelma
 * `while`: toista ehtoon asti
@@ -261,9 +251,9 @@ for r in rivit:
 
 ---
 
-# 🧠 Ehtolauseet Pythonissa 🚦
+# 🚦 Ehtolauseet Pythonissa
 
-## 📍 1) Miksi ehtolauseita käytetään?
+## 📍 Miksi ehtolauseita käytetään?
 
 Ohjelmoinnissa tehdään jatkuvasti päätöksiä:
 
@@ -273,6 +263,8 @@ Ohjelmoinnissa tehdään jatkuvasti päätöksiä:
 
 👉 **Ehtolauseiden avulla ohjelma valitsee toteutettavan polun.**
 
+---
+
 Pythonissa avainrakenteet ovat:
 
 * `if`
@@ -281,7 +273,7 @@ Pythonissa avainrakenteet ovat:
 
 ---
 
-## 🧩 2) Perusrakenne
+## 🧩 Perusrakenne
 
 ```py
 if ehto:
@@ -305,7 +297,7 @@ else:
 
 ---
 
-## 🔢 3) Yleisimmät vertailuoperaattorit
+## 🔢 Yleisimmät vertailuoperaattorit
 
 | Operaattori | Tarkoitus              | Esimerkki      |
 | ----------- | ---------------------- | -------------- |
@@ -318,7 +310,7 @@ else:
 
 ---
 
-## ⚙️ 4) Loogiset operaattorit
+## ⚙️ Loogiset operaattorit
 
 Niillä yhdistetään ehtoja:
 
@@ -340,9 +332,9 @@ if ika >= 18 and rooli == "student":
 
 ---
 
-## 📁 5) Ehtolauseet tiedoston käsittelyssä
+## 📁 Ehtolauseet tiedoston käsittelyssä
 
-Tämä tapa esiintyy varausjärjestelmissä, datan puhdistuksessa ja lokien lukemisessa → **Kopioi koodi ja kysy AI-työkaluilta tarkennusta rivien ja komentojen toiminnasta**
+Tämä tapa esiintyy varausjärjestelmissä, datan puhdistuksessa ja lokien lukemisessa **→ Kopioi koodi ja kysy AI-työkaluilta tarkennusta rivien ja komentojen toiminnasta**
 
 ```py
 with open("varaukset.txt", "r", encoding="utf-8") as f:
@@ -376,7 +368,7 @@ with open("varaukset.txt", "r", encoding="utf-8") as f:
 
 ---
 
-## 🧠 6) Ehtojen kirjoittaminen siististi (best practices)
+## 🧠 Ehtojen kirjoittaminen siististi (best practices)
 
 **✔️ Hyvä**
 
@@ -464,7 +456,7 @@ if käyttäjä != None and käyttäjä.is_admin == True:
 
 ---
 
-## 🎯 7) Sisäkkäiset ehtolauseet (nested if)
+## 🎯 Sisäkkäiset ehtolauseet (nested if)
 
 ```py
 ika = 20
@@ -479,11 +471,12 @@ else:
     print("Alaikäinen")
 ```
 
-💡 Jos sisäkkäisiä ehtoja alkaa olla liikaa, harkitse `elif`-rakenteen käyttöä tai logiikan pilkkomista funktioihin.
+> [!NOTE]
+> 💡  Jos sisäkkäisiä ehtoja alkaa olla liikaa, harkitse `elif`-rakenteen käyttöä tai logiikan pilkkomista funktioihin.
 
 ---
 
-## 🚦 8) Ehtolauseet merkkijonojen käsittelyssä
+## 🚦 Ehtolauseet merkkijonojen käsittelyssä
 
 ```py
 email = "test@example.com"
@@ -503,7 +496,7 @@ if not nimi:
 
 ---
 
-## 🔀 9) Ternary-operaatio (lyhyt if)
+## 🔀 Ternary-operaatio (lyhyt if)
 
 Kompakti tapa valita arvo:
 
@@ -515,7 +508,7 @@ print(status)
 
 ---
 
-## 📊 10) Ehtolauseet ja numerot
+## 📊 Ehtolauseet ja numerot
 
 ```py
 pisteet = 85
@@ -532,7 +525,7 @@ else:
 
 ---
 
-## 🏁 11) Yhteenveto
+## 🏁 Yhteenveto
 
 📌 Ehtolauseet ovat keskeinen osa ohjelman päätöksentekoa. Niillä voidaan:
 
@@ -541,6 +534,7 @@ else:
 * estää virheitä
 * ohjata ohjelman kulku oikeille poluille
 
-Kun yhdistät ehtolauseet silmukoihin ja tiedostonkäsittelyyn, pystyt rakentamaan vakaampia ja virheensietoisempia ohjelmia → Kuten varausjärjestelmiä
+> [!NOTE]
+> 💡 Kun yhdistät ehtolauseet silmukoihin ja tiedostonkäsittelyyn, pystyt rakentamaan vakaampia ja virheensietoisempia ohjelmia → Kuten varausjärjestelmiä
 
 ---
