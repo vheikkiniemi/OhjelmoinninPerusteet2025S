@@ -545,6 +545,9 @@ else:
 
 **Listan tulostus ilman viimeistä viimeistä -merkkiä**
 
+> [!NOTE]
+> 💡 Koodeihin on lisätty funktio input → Nyt ohjelmaa on helppo käyttää Visual Studio Coden *play*-painikkeella
+
 ```py
 def tulosta_lista():
     lista = ["omena", "banaani", "päärynä", "kiivi"]
@@ -557,6 +560,9 @@ def tulosta_lista():
 
 def main():
     tulosta_lista()
+    
+    # Odottaa käyttäjän syötettä ennen sulkemista
+    input("\nPaina Enter sulkeaksesi...")
 
 if __name__ == "__main__":
     main()
@@ -573,6 +579,9 @@ def tulosta_lista():
 
 def main():
     tulosta_lista()
+    
+    # Odottaa käyttäjän syötettä ennen sulkemista
+    input("\nPaina Enter sulkeaksesi...")
 
 if __name__ == "__main__":
     main()
