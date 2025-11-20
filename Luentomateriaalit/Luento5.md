@@ -181,9 +181,9 @@ evens = [n for n in numbers if n % 2 == 0]
 
 ## 🧠 Hyvät käytännöt
 
-✅ Älä muokkaa listaa samalla kun iteroit
-✅ Käytä `enumerate()` selkeyden vuoksi
-✅ Käytä `break` ja `continue` harkiten
+✅ Älä muokkaa listaa samalla kun iteroit  
+✅ Käytä `enumerate()` selkeyden vuoksi  
+✅ Käytä `break` ja `continue` harkiten  
 
 ---
 
