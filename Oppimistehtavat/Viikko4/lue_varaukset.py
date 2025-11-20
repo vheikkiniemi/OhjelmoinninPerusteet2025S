@@ -25,21 +25,21 @@ def muunna_varaustiedot(varaus: list) -> list:
     # Tähän tulee siis varaus oletustietotyypeillä (str)
     # Varauksessa on 11 saraketta -> Lista -> Alkiot 0-10
     # Muuta tietotyypit haluamallasi tavalla -> Seuraavassa esimerkki ensimmäisestä alkioista
-    muutettuvaraus = []
+    muutettu_varaus = []
     # Ensimmäisen alkion = varaus[0] muunnos
-    muutettuvaraus.append(int(varaus[0]))
+    muutettu_varaus.append(int(varaus[0]))
     # Ja tästä jatkuu
-    muutettuvaraus.append("")
-    muutettuvaraus.append("")
-    muutettuvaraus.append("")
-    muutettuvaraus.append("")
-    muutettuvaraus.append("")
-    muutettuvaraus.append("")
-    muutettuvaraus.append("")
-    muutettuvaraus.append("")
-    muutettuvaraus.append("")
-    muutettuvaraus.append("")
-    return muutettuvaraus
+    muutettu_varaus.append("")
+    muutettu_varaus.append("")
+    muutettu_varaus.append("")
+    muutettu_varaus.append("")
+    muutettu_varaus.append("")
+    muutettu_varaus.append("")
+    muutettu_varaus.append("")
+    muutettu_varaus.append("")
+    muutettu_varaus.append("")
+    muutettu_varaus.append("")
+    return muutettu_varaus
 
 def hae_varaukset(varaustiedosto: str) -> list:
     # HUOM! Tälle funktioille ei tarvitse tehdä mitään!
@@ -54,8 +54,8 @@ def hae_varaukset(varaustiedosto: str) -> list:
     return varaukset
 
 def main():
-    # HUOM! seuraaville riveille ei tarvitse tehdä mitään!
-    # Jos muutat, kommentoi miksi muutit
+    # HUOM! seuraaville riveille ei tarvitse tehdä mitään osassa A!
+    # Osa B vaatii muutoksia -> Esim. tulostuksien (print-funktio) muuttamisen.
     # Kutsutaan funkioita hae_varaukset, joka palauttaa kaikki varaukset oikeilla tietotyypeillä
     varaukset = hae_varaukset("varaukset.txt")
     print(" | ".join(varaukset[0]))

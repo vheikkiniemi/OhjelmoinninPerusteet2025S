@@ -1,11 +1,11 @@
+# 🐍 Silmukat Pythonissa
+
 > [!NOTE]
 > Materiaali on luotu ChatGPT:n ja Copilotin avulla.
 
-# 🐍 Silmukat Pythonissa
-
 ## 🔁 Mikä on silmukka?
 
-Silmukka toistaa saman koodilohkon useita kertoja.
+> *Silmukka toistaa saman koodilohkon useita kertoja.*
 
 > [!NOTE]
 > 💡 Ohjelma on itsessään jo silmukka. Pythonin `Main`-osasta käytetään nimeä pääsilmukka. `Main` voidaan suorittaa riviltä ja lopettaa suorittaminen viimeisen rivin jälkeen. Usein ohjelmat ovat kuitenkin sellaisia, että `Mainin` suorittaminen lopetetaan vasta erillisellä keskeytyksellä alla olevan esimerkin mukaisesti:
