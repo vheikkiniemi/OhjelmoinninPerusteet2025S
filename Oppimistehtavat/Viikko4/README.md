@@ -9,10 +9,10 @@ Tehtävän tavoitteena on harjoitella:
 
 * tietotyyppimuunnoksia Pythonisssa käyttäen erillistä funkiota
 * listojen käsittelyä ja varausdatan rakenteistamista
+* varausdatan tulostamista käyttäen silmuikoita ja ehtolauseita
 
 > [!NOTE]
 > Halutessa työn voi tehdä **`pareittain (max. kaksi)`**. Tällöin kohdassa [Palautusohje Itslearningiin](#-palautusohje-itslearningiin) pari tekee vain yhden palautuksen, johon on yhdistetty molemmat.
-> Osa **A** tehdään ensin. **Palautus Itslearningiin tehdään yhdessä osan B kanssa.**
 
 ---
 
@@ -43,7 +43,7 @@ Rivillä on seuraavat tiedot:
 | 8  `hinta`             | Tuntihinta (€)       | `float`                        |
 | 9  `varausVahvistettu` | Vahvistettu          | `bool`                         |
 | 10 `varattuTila`       | Varauskohde          | `str`                          |
-| 11 `varausLuotu`       | Milloin varaus luotu | `datetime`            |
+| 11 `varausLuotu`       | Milloin varaus luotu | `datetime.datetime`            |
 
 ---
 
@@ -72,7 +72,7 @@ Tässä osassa keskitytään yhden varausrivin muuntamiseen oikeisiin tietotyypp
 Skriptissä on funktio nimeltä **`muunna_varaustiedot`**, joka saa parametrina **yhdestä rivistä splitatun listan**. Esim.:
 
 ```python
-["201", "Muumi Muumilaakso", "muumi@valkoinenlaakso.org", "0509876543", "2025-11-12", "09:00", "2", "18.50", "True", "Metsätila 1", "2025-08-12 14:33:20"]
+["201", "Muumi Muumilaakso", "muumi@valkoinenlaakso.org", "0509876543", "2025-11-12", "09:00:00", "2", "18.50", "True", "Metsätila 1", "2025-08-12 14:33:20"]
 ```
 
 **Tehtäväsi on muuttaa funktiota `muunna_varaustiedot` niin, että se palauttaa listan, jossa sarakkeet ovat seuraavissa tietotyypeissä:**
@@ -141,9 +141,9 @@ python lue_varaukset.py
 
 ### 🧩 Vihjeitä
 
-* Tutustu edellisten tehtävien: [viikko2](../Viikko2/README.md) [viikko3](../Viikko3/README.md) vihjeisiin
-* Viikon 2 työpajalla tehtyyn ohjelmaan, joka löytyy [tästä linkistä](https://github.com/vheikkiniemi/OhjelmoinninPerusteet2025S/blob/main/Testikoodeja/Viikon2Tyopaja/lue_varaukset.py)
-* Viikon 3 työpajalla tehtyyn ohjelmaan, joka löytyy [tästä linkistä](https://github.com/vheikkiniemi/OhjelmoinninPerusteet2025S/blob/main/Testikoodeja/Viikon3Tyopaja/lue_varaukset.py)
+* Tutustu edellisten tehtävien: [viikko2](../Viikko2/README.md) ja [viikko3](../Viikko3/README.md) vihjeisiin
+* Tutustu viikon 2 työpajalla tehtyyn ohjelmaan, joka löytyy [tästä linkistä](https://github.com/vheikkiniemi/OhjelmoinninPerusteet2025S/blob/main/Testikoodeja/Viikon2Tyopaja/lue_varaukset.py)
+* Tutustu viikon 3 työpajalla tehtyyn ohjelmaan, joka löytyy [tästä linkistä](https://github.com/vheikkiniemi/OhjelmoinninPerusteet2025S/blob/main/Testikoodeja/Viikon3Tyopaja/lue_varaukset.py)
 * **Katso Panoptosta viikon 3 työpajan tallenne**
 * Tee muunnokset **pienissä paloissa**:
 
@@ -159,32 +159,232 @@ python lue_varaukset.py
 
 ---
 
-## 🧠 Osa B: jatko-osa (tulossa myöhemmin)
+## 🧠 Osa B: Varausten käsittely silmukoilla ja ehtolauseilla
 
-Osa B täydentää tämän viikon tehtävää:
-
-* Osa A keskittyy tietotyyppien muuntamiseen.
-* Osa B:ssa jatketaan tästä eteenpäin (esim. varauslistan käsittelyyn ja tulostukseen liittyvillä toiminnoilla).
+Tässä osassa rakennat ohjelman, joka tulostaa **kerralla viisi erilaista yhteenvetoa** varauksista. Kaikkien tulosteiden tulee tulla **samassa ohjelman suorituksessa**, järjestyksessä 1–5.
 
 > [!IMPORTANT]
-> **Älä palauta tehtävää vielä Itslearningiin.**
-> Osan A **palautus tapahtuu yhdessä osan B kanssa.**
+> Osan A tulostetta ei tarvita palautukseen. Pelkästään osasta B syntyvät tulosteet palautettavaan kuvakaappaukseen.
+
+---
+
+### 🧩 Vihjeitä
+
+* Tutustu viikon 4 työpajalla tehtyyn ohjelmaan, joka löytyy [tästä linkistä](https://github.com/vheikkiniemi/OhjelmoinninPerusteet2025S/blob/main/Testikoodeja/Viikon4ATyopaja/lue_varaukset.py)
+* **Katso Panoptosta viikon 4 työpajan tallenne**
+
+---
+
+### 1️⃣ Tuloste: Kaikki vahvistetut varaukset
+
+Tuloste alkaa otsikolla:
+
+```
+1) Vahvistetut varaukset
+```
+
+Ja jokainen varaus tulostuu muodossa:
+
+```
+- Nimi, Varattu tila, pv.kk.vvvv klo hh.mm
+```
+
+Esimerkkityyli:
+
+```
+1) Vahvistetut varaukset
+- Muumi Muumilaakso, Metsätila 1, 12.11.2025 klo 09.00
+- Pikku Myy Myrsky, Punainen huone, 22.10.2025 klo 15.45
+```
+
+---
+
+### 2️⃣ Tuloste: Pitkät varaukset (kesto vähintään 3 h)
+
+Otsikko:
+
+```
+2) Pitkät varaukset (≥ 3 h)
+```
+
+Muoto:
+
+```
+- Nimi, pv.kk.vvvv klo hh.mm, kesto X h, Varattu tila
+```
+
+---
+
+### 3️⃣ Tuloste: Varaus vahvistettu vai ei?
+
+Otsikko:
+
+```
+3) Varausten vahvistusstatus
+```
+
+Muoto:
+
+```
+Nimi → Vahvistettu
+Nimi → EI vahvistettu
+```
+
+---
+
+### 4️⃣ Tuloste: Yhteenveto vahvistetuista ja ei-vahvistetuista
+
+Otsikko:
+
+```
+4) Yhteenveto vahvistuksista
+```
+
+Muoto:
+
+```
+- Vahvistettuja varauksia: X kpl
+- Ei-vahvistettuja varauksia: Y kpl
+```
+
+---
+
+### 5️⃣ Tuloste: Vahvistettujen varausten kokonaistulot (pilkulla!)
+
+Otsikko:
+
+```
+5) Vahvistettujen varausten kokonaistulot
+```
+
+Muoto:
+
+```
+Vahvistettujen varausten kokonaistulot: 243,50 €
+```
+
+Huomaa rahasumman pilkku:
+
+```python
+summa_str = f"{summa:.2f}".replace(".", ",")
+```
+
+---
+
+### 🔍 Miltä koko tuloste voisi näyttää? (Esimerkki)
+
+> Tämä on vain hahmotelma, ei liitetyn tiedoston todellista sisältöä.
+
+```
+1) Vahvistetut varaukset
+- Muumi Muumilaakso, Metsätila 1, 12.11.2025 klo 09.00
+- Hemuli Kasvikerääjä, Kasvitutkimuslabra, 5.11.2025 klo 10.30
+
+2) Pitkät varaukset (≥ 3 h)
+- Pikku Myy Myrsky, 22.10.2025 klo 15.45, kesto 3 h, Punainen huone
+- Nipsu Rahapulainen, 18.9.2025 klo 13.00, kesto 4 h, Varastotila N
+
+3) Varausten vahvistusstatus
+Muumi Muumilaakso → Vahvistettu
+Niiskuneiti Muumilaakso → EI vahvistettu
+Pikku Myy Myrsky → Vahvistettu
+
+4) Yhteenveto vahvistuksista
+- Vahvistettuja varauksia: 3 kpl
+- Ei-vahvistettuja varauksia: 2 kpl
+
+5) Vahvistettujen varausten kokonaistulot
+Vahvistettujen varausten kokonaistulot: 243,50 €
+```
+
+---
+
+### 💎1️⃣ Bonustuloste (valinnainen): Kallein varaus
+
+Tuloste:
+
+```text
+Kallein varaus:
+- Nimi: Muumi Muumilaakso
+- Varattu tila: Metsätila 1
+- Päivä: 12.11.2025
+- Kellonaika: 09.00
+- Kesto: 3 h
+- Kokonaishinta: 55,50 €
+```
+
+---
+
+### 💎2️⃣ Bonustuloste (valinnainen): Varausten määrä per päivä
+
+Tuloste:
+
+```text
+Varausten määrä päivittäin:
+- 18.9.2025: 1 kpl
+- 22.10.2025: 1 kpl
+- 5.11.2025: 1 kpl
+- 12.11.2025: 2 kpl
+```
+
+---
+
+### 💎3️⃣ Bonustuloste (valinnainen): Suodata varaukset tietyn tilan mukaan
+
+Esim. käyttäjä antaa syötteen:
+
+```text
+Anna tilan nimi: Metsätila 1
+```
+
+Tuloste:
+
+```text
+Varaukset tilaan 'Metsätila 1':
+- Muumi Muumilaakso, 12.11.2025 klo 09.00, kesto 3 h
+- Niiskuneiti Muumilaakso, 1.12.2025 klo 14.15, kesto 2 h
+```
+
+---
+
+### 💎4️⃣ Bonustuloste (valinnainen): Vain tulevat varaukset tiettyyn päivään asti
+
+Esim. käyttäjä antaa syötteen:
+
+```text
+Anna päivämäärä (pp.kk.vvvv): 1.10.2025
+```
+
+Tuloste:
+
+```text
+Varaukset annetun päivän jälkeen:
+- Hemuli Kasvikerääjä, 5.11.2025 klo 10.30, Kasvitutkimuslabra
+- Muumi Muumilaakso, 12.11.2025 klo 09.00, Metsätila 1
+- Niiskuneiti Muumilaakso, 1.12.2025 klo 14.15, Kukkahuone
+```
+
+---
+
+### 💎5️⃣ Bonustuloste (valinnainen): Keskimääräinen kesto vahvistetuille varauksille
+
+Tuloste:
+
+```text
+Vahvistettujen varausten keskimääräinen kesto: 2,7 h
+```
 
 ---
 
 ## 📤 Palautusohje Itslearningiin
 
-> [!WARNING]
-> **Tätä vaihetta ei vielä tehdä (eli palautusta).**
-> Viikon 4 tehtävän **lopullinen palautus** (Osa A + Osa B) tehdään, kun Osa B on julkaistu.
+Palauta **linkki GitHub-repoon** ja **kuvankaappaus konsolista**, jossa näkyy ohjelman suoritus ja tulostus.
 
-Myöhemmin, kun Osa B on valmis, palautusohje on muodoltaan samantapainen kuin edellisellä viikolla:
+> [!NOTE]
+> Ota kuvakaappaus ilman bonustehtäviä ja osan A tulostetta.
 
-* linkki GitHub-repoon
-* kuvankaappaus ohjelman suorituksesta (konsoli)
-* lyhyt teksti:
-
-  > Mitä jäi päällimmäisenä tehtävästä mieleen?
+Lisää palautukseen myös lyhyt teksti:
+> Mitä jäi päällimmäisenä tehtävästä mieleen?
 
 ---
 
