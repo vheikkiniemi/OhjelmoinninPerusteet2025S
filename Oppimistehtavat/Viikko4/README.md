@@ -172,6 +172,8 @@ Tässä osassa rakennat ohjelman, joka tulostaa **kerralla viisi erilaista yhtee
 
 * Tutustu viikon 4 työpajalla tehtyyn ohjelmaan, joka löytyy [tästä linkistä](https://github.com/vheikkiniemi/OhjelmoinninPerusteet2025S/blob/main/Testikoodeja/Viikon4ATyopaja/lue_varaukset.py)
 * **Katso Panoptosta viikon 4 työpajan tallenne**
+* Pyri etenemään pienen askelin testaten aina, että onnistuiko muutokset vai ei.
+* **Jos et pääse eteenpäin, tule työpajaan! 😉**
 
 ---
 
