@@ -333,6 +333,9 @@ Varausten määrä päivittäin:
 
 Esim. käyttäjä antaa syötteen:
 
+> [!TIP]
+> Käytä funktiota `input("Anna tilan nimi: ")`
+
 ```text
 Anna tilan nimi: Metsätila 1
 ```
@@ -350,6 +353,9 @@ Varaukset tilaan 'Metsätila 1':
 ### 💎4️⃣ Bonustuloste (valinnainen): Vain tulevat varaukset tiettyyn päivään asti
 
 Esim. käyttäjä antaa syötteen:
+
+> [!TIP]
+> Käytä funktiota `input("Anna päivämäärä (pp.kk.vvvv): ")`
 
 ```text
 Anna päivämäärä (pp.kk.vvvv): 1.10.2025
