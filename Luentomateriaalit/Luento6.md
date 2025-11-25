@@ -62,7 +62,7 @@ Mutta ohjelmointi ei ole vain koodin naputtelua — ohjelmointi on ongelman ratk
 
 Kun ymmärrämme mitä haluamme tehdä, mietimme **Miten tämän voisi ratkaista?**
 
-**Tässä vaiheessa ei kirjoiteta vielä koodia → Mietitään vain rakennetta.**
+> **👉 Tässä vaiheessa ei kirjoiteta vielä koodia → Mietitään vain rakennetta.**
 
 ---
 
@@ -79,7 +79,7 @@ Kun ymmärrämme mitä haluamme tehdä, mietimme **Miten tämän voisi ratkaista
   5. Laskea kuukausikohtaiset summat
   6. Tulostaa tulos
 
-> Tästä syntyy kuin pieni kartta tai resepti.
+> **👉 Tästä syntyy kuin pieni kartta tai resepti.**
 
 ---
 
@@ -87,7 +87,7 @@ Kun ymmärrämme mitä haluamme tehdä, mietimme **Miten tämän voisi ratkaista
 
 * Koodista tulee sekavaa, koska et tiedä mitä seuraavaksi tehdä
 * Teet saman työn kahdesti (tai kolme kertaa…)
-* Funktiot jäävät puuttumaan → koodi kasvaa yhdeksi jättiläiseksi 🐙
+* Funktiot jäävät puuttumaan → koodi kasvaa yhdeksi jättiläiseksi
 * Ongelmia on vaikea löytää ja korjata
 
 ---
