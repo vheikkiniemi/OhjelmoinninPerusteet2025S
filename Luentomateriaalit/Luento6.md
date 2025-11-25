@@ -6,7 +6,8 @@
 **🧠 Mitä, miksi ja mitä tapahtuu?**
 
 Tervetuloa ensimmäisen ohjelmointiprojektin pariin! 🎉
-Tämä materiaali on kirjoitettu niin, että voit aloittaa **vaikka et olisi koskaan tehnyt yhtään projektia** — et ohjelmointia, et ryhmäprojekteja, et mitään projektia. Kaikki on sinulle täysin uutta? Se on täysin ok. Tämä on sinulle kirjoitettu.
+
+Tämä materiaali on kirjoitettu niin, että voit aloittaa **vaikka et olisi koskaan tehnyt yhtään projektia** → Et ohjelmointia, et ryhmäprojekteja, et mitään projektia. Kaikki on sinulle täysin uutta? Se on täysin ok. Tämä on sinulle kirjoitettu.
 
 Ajattele tätä pienenä matkakertomuksena: aloitat tyhjästä ja lopulta sinulla on toimiva ohjelma, joka käsittelee dataa ja tulostaa tuloksia komentoriville.
 
