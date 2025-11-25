@@ -161,7 +161,7 @@ python lue_varaukset.py
 
 ## 🧠 Osa B: Varausten käsittely silmukoilla ja ehtolauseilla
 
-Tässä osassa rakennat ohjelman, joka tulostaa **kerralla viisi erilaista yhteenvetoa** varauksista. Kaikkien tulosteiden tulee tulla **samassa ohjelman suorituksessa**, järjestyksessä 1–5.
+Tässä osassa rakennat ohjelman, joka tulostaa **kerralla viisi erilaista yhteenvetoa** varauksista. Kaikkien tulosteiden tulee tulla **samassa ohjelman suorituksessa (eli annettaessa komento python lue_Varaukset.py kaikki tulostuvat tässä yhteydessä)**, järjestyksessä 1–5.
 
 > [!IMPORTANT]
 > Osan A tulostetta ei tarvita palautukseen. Pelkästään osasta B syntyvät tulosteet palautettavaan kuvakaappaukseen.
