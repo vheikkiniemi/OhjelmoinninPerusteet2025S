@@ -260,7 +260,7 @@ Ilman perusputkea:
 
 ### 🎯 Miltä perusputki näyttää konkreettisesti meidän projektissa?
 
-Tässä projektissa (2025.csv → kuukausitasot)
+Tässä projektissa (viikko42.csv → päivät ja tunnit → data)
 **perusputki on yhtä kuin tämä:**
 
 ```
