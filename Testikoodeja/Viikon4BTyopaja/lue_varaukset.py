@@ -6,37 +6,9 @@
 #
 # See LICENSE file in the project root for full license information.
 
-"""
-Ohjelma joka tulostaa tiedostosta luettujen varausten alkiot ja niiden tietotyypit
-
-varausId | nimi | sähköposti | puhelin | varauksenPvm | varauksenKlo | varauksenKesto | hinta | varausVahvistettu | varattuTila | varausLuotu
-------------------------------------------------------------------------
-201 | Muumi Muumilaakso | muumi@valkoinenlaakso.org | 0509876543 | 2025-11-12 | 09:00:00 | 2 | 18.50 | True | Metsätila 1 | 2025-08-12 14:33:20
-int | str | str | str | date | time | int | float | bool | str | datetime
-------------------------------------------------------------------------
-202 | Niiskuneiti Muumilaakso | niisku@muumiglam.fi | 0451122334 | 2025-12-01 | 11:30:00 | 1 | 12.00 | False | Kukkahuone | 2025-09-03 09:12:48
-int | str | str | str | date | time | int | float | bool | str | datetime
-------------------------------------------------------------------------
-203 | Pikku Myy Myrsky | myy@pikkuraivo.net | 0415566778 | 2025-10-22 | 15:45:00 | 3 | 27.90 | True | Punainen Huone | 2025-07-29 18:05:11
-int | str | str | str | date | time | int | float | bool | str | datetime
-------------------------------------------------------------------------
-204 | Nipsu Rahapulainen | nipsu@rahahuolet.me | 0442233445 | 2025-09-18 | 13:00:00 | 4 | 39.95 | False | Varastotila N | 2025-08-01 10:59:02
-int | str | str | str | date | time | int | float | bool | str | datetime
-------------------------------------------------------------------------
-205 | Hemuli Kasvikerääjä | hemuli@kasvikeraily.club | 0463344556 | 2025-11-05 | 08:15:00 | 2 | 19.95 | True | Kasvitutkimuslabra | 2025-10-09 16:41:55
-int | str | str | str | date | time | int | float | bool | str | datetime
-------------------------------------------------------------------------
-"""
 from datetime import datetime
 
 def muunna_varaustiedot(varaus: list) -> list:
-    #print(varaus)
-    # Tähän tulee siis varaus oletustietotyypeillä (str)
-    # Varauksessa on 11 saraketta -> Lista -> Alkiot 0-10
-    # Muuta tietotyypit haluamallasi tavalla -> Seuraavassa esimerkki ensimmäisestä alkioista
-    #return [int(varaus[0]), varaus[1], varaus[2], varaus[3], datetime.strptime(varaus[4], "%Y-%m-%d").date(),
-    #        datetime.strptime(varaus[5], "%H:%M").time(), int(varaus[6]), float(varaus[7]), 
-    #        varaus[8].lower() == "true", varaus[9], datetime.strptime(varaus[10], "%Y-%m-%d %H:%M:%S")]
     muutettu_varaus = []
     muutettu_varaus.append(int(varaus[0]))
     muutettu_varaus.append(varaus[1])
@@ -52,8 +24,6 @@ def muunna_varaustiedot(varaus: list) -> list:
     return muutettu_varaus
 
 def hae_varaukset(varaustiedosto: str) -> list:
-    # HUOM! Tälle funktioille ei tarvitse tehdä mitään!
-    # Jos muutat, kommentoi miksi muutit
     varaukset = []
     varaukset.append(["varausId", "nimi", "sähköposti", "puhelin", "varauksenPvm", "varauksenKlo", "varauksenKesto", "hinta", "varausVahvistettu", "varattuTila", "varausLuotu"])
     with open(varaustiedosto, "r", encoding="utf-8") as f:
@@ -64,7 +34,6 @@ def hae_varaukset(varaustiedosto: str) -> list:
     return varaukset
 
 def vahvistetut_varaukset(varaukset: list):
-    # - Pikku Myy Myrsky, Punainen Huone, 22.10.2025 klo 15.45
     for varaus in varaukset[1:]:
         if(varaus[8]):
             print(f"- {varaus[1]}, {varaus[9]}, {varaus[4].strftime('%d.%m.%Y')} klo {varaus[5].strftime('%H.%M')}")
@@ -72,7 +41,6 @@ def vahvistetut_varaukset(varaukset: list):
     print()
 
 def pitkat_varaukset(varaukset: list):
-    # - Pikku Myy Myrsky, 22.10.2025 klo 15.45, kesto 3 h, Punainen huone
     for varaus in varaukset[1:]:
         if(varaus[6] >= 3):
             print(f"- {varaus[1]}, {varaus[4].strftime('%d.%m.%Y')} klo {varaus[5].strftime('%H.%M')}, kesto {varaus[6]} h, {varaus[9]}")
@@ -80,7 +48,6 @@ def pitkat_varaukset(varaukset: list):
     print()
 
 def varausten_vahvistusstatus(varaukset: list):
-    # Muumi Muumilaakso → Vahvistettu
     for varaus in varaukset[1:]:
         if(varaus[8]):
             print(f"{varaus[1]} → Vahvistettu")
@@ -90,8 +57,6 @@ def varausten_vahvistusstatus(varaukset: list):
     print()
 
 def varausten_lkm(varaukset: list):
-    # - Vahvistettuja varauksia: 3 kpl
-    # - Ei-vahvistettuja varauksia: 2 kpl
     vahvistetutVaraukset = 0
     eiVahvistetutVaraukset = 0
     for varaus in varaukset[1:]:
@@ -105,7 +70,6 @@ def varausten_lkm(varaukset: list):
     print()
 
 def varausten_kokonaistulot(varaukset: list):
-    # Vahvistettujen varausten kokonaistulot: 243,50 €
     varaustenTulot = 0
     for varaus in varaukset[1:]:
         if(varaus[8]):
@@ -115,9 +79,6 @@ def varausten_kokonaistulot(varaukset: list):
     print()
 
 def main():
-    # HUOM! seuraaville riveille ei tarvitse tehdä mitään osassa A!
-    # Osa B vaatii muutoksia -> Esim. tulostuksien (print-funktio) muuttamisen.
-    # Kutsutaan funkioita hae_varaukset, joka palauttaa kaikki varaukset oikeilla tietotyypeillä
     varaukset = hae_varaukset("varaukset.txt")
     print("1) Vahvistetut varaukset")
     vahvistetut_varaukset(varaukset)
