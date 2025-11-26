@@ -581,10 +581,10 @@ Vaan:
 
 Kun dokumentoit, selkeytät ja lisensoit koodisi:
 
-✔️ autat tulevia kehittäjiä
-✔️ vähennät virheitä
-✔️ lyhennät kehitysaikaa
-✔️ parannat ohjelmiston laatua
+✔️ autat tulevia kehittäjiä  
+✔️ vähennät virheitä  
+✔️ lyhennät kehitysaikaa  
+✔️ parannat ohjelmiston laatua  
 ✔️ noudatat hyviä käytäntöjä, joita yrityksissä vaaditaan
 
 ---
