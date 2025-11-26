@@ -409,7 +409,7 @@ Opintojaksolla:
 
 ---
 
-## 🎉 Lopuksi – Mitä tästä kaikesta pitäisi jäädä mieleen?
+## 🎉 Lopuksi → Mitä tästä kaikesta pitäisi jäädä mieleen?
 
 Ohjelmointiprojekti ei ole mysteeri tai sattuma. Se on **selkeä prosessi**, jossa jokainen vaihe vaikuttaa seuraavaan:
 
@@ -423,6 +423,181 @@ Ohjelmointiprojekti ei ole mysteeri tai sattuma. Se on **selkeä prosessi**, jos
 | Testaus               | Varmistat toiminnan | Lopputulos on virheellinen        |
 | Palautus              | Työ hyväksytään     | Arviointi vaikeutuu               |
 
-🎯 *Kun nämä vaiheet ovat hallussa, pystyt tekemään minkä tahansa pienen Python-projektin.*
+🎯 *Kun nämä vaiheet ovat hallussa, pystyt tekemään minkä tahansa pienen ohjelmistoprojektin.*
+
+---
+
+# 📘 Koodin elinkaari → Miksi koodin ympärille tarvitaan paljon muutakin
+
+Ohjelmointi ei ole vain koodin kirjoittamista. Jokainen rivi, jonka kirjoitat, tulee mitä todennäköisimmin jonkun toisen luettavaksi, ylläpidettäväksi tai laajennettavaksi. Ohjelma elää usein **vuosia**, ja sen aikana:
+
+* ohjelmaa parannetaan
+* siihen lisätään ominaisuuksia
+* siinä korjataan virheitä
+* sitä optimoidaan
+* sitä siirretään uusille alustoille
+* sitä käyttää useampi kehittäjä ja mahdollisesti useita tiimejä
+
+Tätä kokonaisuutta kutsutaan **ohjelman elinkaareksi**, ja juuri elinkaari tekee **selkeydestä ja dokumentoinnista** aivan keskeistä.
+
+---
+
+## 🏗️ Ohjelman elinkaari kiteytettynä
+
+1. **Suunnittelu** – miksi ohjelma tehdään ja mitä sen pitää tehdä
+2. **Toteutus** – koodin kirjoittaminen
+3. **Testaus** – varmistetaan, että ohjelma toimii oikein
+4. **Julkaisu** – ohjelma otetaan käyttöön
+5. **Ylläpito** – ohjelmaa korjataan ja päivitetään
+6. **Laajennus** – ohjelmaan lisätään uusia ominaisuuksia
+7. **Uudelleenkirjoitus / poistaminen** – joskus ohjelma korvataan uudella
+
+👉 Tärkeää: **Ylläpito vie tyypillisesti 60–80 % koko elinkaaresta**, kun taas uuden koodin kirjoittaminen vain murto-osan.
+Tämän takia koodin ympärillä olevat laadukkuuden tekijät ovat kriittisiä.
+
+---
+
+## 🖋️ Copyright ja lisenssi → Miksi ne ovat tärkeitä?
+
+Copyright- ja lisenssimerkinnät:
+
+* kertovat **kuka omistaa koodin**
+* kertovat **miten koodia saa käyttää**, kopioida ja muokata
+* suojaavat sekä kehittäjää että käyttäjää
+* ovat välttämättömiä esim. avoimen lähdekoodin projekteissa
+* auttavat organisaatioissa varmistamaan, että koodi on ”laillisesti puhdasta”
+
+Esim. MIT-lisenssi:
+
+```python
+# Copyright (c) 2025 Your Name
+# License: MIT
+```
+
+💡 **Ilman lisenssiä koodia ei saa lainkaan käyttää lain näkökulmasta!**
+
+---
+
+## 🧾 Docstringit → Koodin sisäinen käyttöohje
+
+Docstring kertoo:
+
+* mitä funktio tekee
+* mitä parametreja se odottaa
+* mitä se palauttaa
+* miksi funktio on olemassa
+
+Docstring on **suoraan Pythonin luettavissa**:
+
+```py
+help(funktio_nimi)
+```
+
+Ilman docstringiä seuraava kehittäjä ei välttämättä ymmärrä funktiota – tai käyttää sitä väärin.
+
+🔥 Docstring = funktiotasolla tapahtuva dokumentointi.
+🧩 Ilman sitä monimutkaisen ohjelman ylläpito vaikeutuu valtavasti.
+
+---
+
+## 🔤 Type hints → Selkeyttä ja virheiden ehkäisyä
+
+Type hints eli tietotyyppivihjeet ovat merkintöjä, jotka kertovat:
+
+* mitä tyyppiä parametrit ovat
+* mitä tyyppiä funktio palauttaa
+
+Esimerkki:
+
+```py
+def laske(wh: int) -> float:
+    ...
+```
+
+Ne ovat tärkeitä, koska:
+
+* ne vähentävät virheitä
+* ne kertovat nopeasti miten funktiota käytetään
+* ne auttavat älykkäitä editoreita (VS Code) tarjoamaan parempia ehdotuksia
+* ne helpottavat ryhmätyötä ja isojen projektien hallintaa
+
+💡 Nykyaikaisessa Python-ohjelmoinnissa type hints ovat ammattistandardia.
+
+---
+
+## 💬 Kommentointi → Miksi selitys on joskus tärkeämpää kuin koodi?
+
+Kommentit eivät kerro **mitä** koodi tekee (sen pitää näkyä jo koodista), vaan **miksi** se tekee niin.
+
+Kommentit ovat tärkeitä:
+
+* kun koodi käsittelee erikoistapauksia
+* kun logiikka ei ole itsestäänselvä
+* kun ratkaisu vaatii perustelun
+* kun ohjelmoijia on useita
+* kun koodia ylläpidetään usean vuoden ajan
+
+Huono koodi ilman kommentteja muuttuu nopeasti **ylläpidettäväksi painajaiseksi**.
+
+---
+
+## 🧩 Muut ”koodin ulkopuoliset” laatutekijät
+
+Näihin kuuluvat esimerkiksi:
+
+* selkeä kansiorakenne
+* tiedostojen nimeämiskäytäntö
+* versiohallinta (Git)
+* automaattiset testit
+* lokitus
+* virheenkäsittely
+* koodityylit (PEP 8)
+
+Nämä varmistavat:
+
+* että uusi kehittäjä pääsee nopeasti sisään
+* että järjestelmä skaalautuu
+* että ohjelma pysyy luotettavana
+* että muutokset voidaan tehdä turvallisesti
+
+---
+
+## 🤝 Ohjelmointi on yhteistyötä
+
+Useimmat ohjelmat:
+
+* tehdään tiimissä
+* elävät vuosia
+* ovat osa suurempaa kokonaisuutta
+* siirtyvät kehittäjältä toiselle
+
+Siksi ammattimainen ohjelmointi ei ole:
+
+> "Kirjoitan koodin joka toimii minulla."
+
+Vaan:
+
+> "Kirjoitan koodin, jonka kuka tahansa pystyy ymmärtämään, ylläpitämään ja jatkamaan."
+
+Kun dokumentoit, selkeytät ja lisensoit koodisi:
+
+✔️ autat tulevia kehittäjiä
+✔️ vähennät virheitä
+✔️ lyhennät kehitysaikaa
+✔️ parannat ohjelmiston laatua
+✔️ noudatat hyviä käytäntöjä, joita yrityksissä vaaditaan
+
+---
+
+## 🎯 Yhteenveto
+
+| Elementti                   | Miksi tärkeä?                                                       |
+| --------------------------- | ------------------------------------------------------------------- |
+| **Ohjelman elinkaari**      | Suunnittelu → toteutus → testaus → julkaisu → ylläpito → laajennus. |
+| **Copyright & lisenssi**    | Määrittävät, kuka omistaa koodin ja miten sitä saa käyttää.         |
+| **Docstringit**             | Selittävät, mitä funktio tekee ja miten sitä käytetään.             |
+| **Type hints**              | Vähentävät virheitä ja selkeyttävät koodin rakennetta.              |
+| **Kommentit**               | Selittävät *miksi* koodi toimii niin kuin toimii.                   |
+| **Koodin rakenne ja tyyli** | Helpottaa tiimityötä, ylläpitoa ja ohjelman laajentamista.          |
 
 ---
