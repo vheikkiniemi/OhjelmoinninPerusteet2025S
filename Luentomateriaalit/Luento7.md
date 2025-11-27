@@ -567,3 +567,113 @@ Kun selaat verkon koodiesimerkkejä, hälytyskellojen pitäisi soida, jos näet:
 * ❌ Kovakoodattuja polkuja, jotka toimivat vain yhdessä ympäristössä.
 * ❌ Globaalit tiedostokahvat, joita funktiot pyörittävät edestakaisin.
 * ❌ Kaiken nielevät `except:`-lohkot ilman tarkennusta.
+
+---
+
+# 🗂️ Vaihtoehtoisia tapoja datan hallintaan tiedostojen lisäksi
+
+Tiedostot ovat hyvä ratkaisu pieniin ja yksinkertaisiin tarpeisiin, mutta kun data kasvaa, monimutkaistuu tai vaatii tehokkaampia hakuja, tarvitaan muita ratkaisuja. Tässä tärkeimmät kategoriat:
+
+---
+
+## 1️⃣ Relaatiotietokannat (SQL-tietokannat)
+
+**Esimerkkejä:** PostgreSQL, MySQL, MariaDB, SQLite
+**Käyttö:** Rakenteinen data, selkeät taulut, sarakkeet, avaimet ja suhteet.
+
+**Vahvuudet:**
+
+* 🔍 Tehokkaat haut (SQL-kieli)
+* 🔐 Tietoturva ja käyttäjäoikeudet
+* 🔁 Transaktiot → tietojen eheys
+* 📊 Sopii monimutkaisille relaatiomalleille
+
+**Missä käytetään?**
+Web-sovellukset, talousjärjestelmät, varausjärjestelmät, opiskelijaprojektit.
+
+---
+
+## 2️⃣ NoSQL-tietokannat
+
+**Esimerkkejä:** MongoDB (dokkumenttivarasto), Redis (avain–arvo), Cassandra (skaalautuvat klusterit)
+
+**Vahvuudet:**
+
+* 📈 Erittäin skaalautuva suurille datamäärille
+* 🧩 Joustava rakenne (ei tarvita ennalta määriteltyä skeemaa)
+* ⚡ Nopea hakeminen avain-arvo -mallissa
+
+**Missä käytetään?**
+IoT-data, lokit, reaaliaikaiset sovellukset, massiiviset datavirrat.
+
+---
+
+## 3️⃣ Pilvipohjaiset datapalvelut
+
+**Esimerkkejä:** Firebase, AWS DynamoDB, Azure Cosmos DB
+
+**Vahvuudet:**
+
+* 🌐 Data automaattisesti saatavilla monesta sijainnista
+* 🛠️ Valmiit API:t ja autentikointi
+* 🔧 Skaalaus ilman omaa ylläpitoa
+
+**Missä käytetään?**
+Mobiilisovellukset, startup-projektit, globaali verkkoliikenne.
+
+---
+
+## 4️⃣ Lokipalvelut ja aikajonot
+
+**Esimerkkejä:** Elasticsearch, InfluxDB, Kafka
+
+**Vahvuudet:**
+
+* 📈 Hyvä suurille tapahtumavirroille
+* ⏱️ Optimoitu ajankohdan mukaan järjestettyyn dataan
+* 🔍 Erinomainen hakutoiminnallisuus (Elasticsearch)
+
+**Missä käytetään?**
+Monitorointi, lokitus, sensoridata, analytiikka.
+
+---
+
+## 5️⃣ Tietorakenteiset tiedostomuodot (kevyt ratkaisu)
+
+**Esimerkkejä:** JSON, CSV, YAML, Parquet
+
+**Vahvuudet:**
+
+* 📁 Helppo lukea ja muokata
+* 🧪 Hyvä kehitysvaiheen pieneen dataan
+* 🔄 Yhteensopiva lähes kaikkien kielten kanssa
+
+**Missä käytetään?**
+Config-tiedostot, pienet datasetit, data-analytiikan tuonti/vienti.
+
+---
+
+## 🎯 Milloin mikäkin kannattaa?
+
+| Tarve                                          | Suositus                 |
+| ---------------------------------------------- | ------------------------ |
+| Pieni projekti, yksinkertainen data            | JSON / CSV               |
+| Opiskelija rakentaa ensimmäistä web-sovellusta | SQLite → PostgreSQL      |
+| Mobiilisovellus tai reaaliaikainen chat        | Firebase / Redis         |
+| Iso järjestelmä, paljon käyttäjiä              | PostgreSQL / MySQL       |
+| Analyyttinen data, suuret lokimäärät           | Elasticsearch / InfluxDB |
+| Maailmanlaajuinen dataliikenne                 | DynamoDB / Cosmos DB     |
+
+---
+
+## 🧠 Yhteenveto
+
+Tiedosto on vain **yksi tapa** säilyttää tietoa. Kun datamäärä, monimutkaisuus tai sovelluksen vaatimukset kasvavat, käyttöjärjestelmän tasolla oleva tiedosto ei enää riitä — tarvitaan datapalvelu, joka tarjoaa:
+
+* paremmat haut
+* datan eheyden
+* transaktiot
+* monen käyttäjän tuen
+* skaalautuvuuden
+* tietoturvan
+* varmuuskopioinnin

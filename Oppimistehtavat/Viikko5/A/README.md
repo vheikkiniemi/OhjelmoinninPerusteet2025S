@@ -33,6 +33,8 @@ Tiedostossa arvot ovat **Wh**. Tulosteessa kaikki energia-arvot tulee esittää 
 
 ## 1️⃣ Ohjelman toiminnallisuus
 
+Ohjelman tulee:
+
 **Tulostaa tiedot tiedostosta `viikko42.csv` selkeänä taulukkona**, jossa näkyy:
 
    * viikonpäivä suomeksi (maanantai, tiistai, …)
@@ -127,8 +129,7 @@ Kooditiedoston alkuun tulee laittaa **copyright- ja lisenssimerkintä**, esimerk
 
 ## 4️⃣ Päivämäärä & aika – käsittele **tietotyyppeinä**, älä tekstinä
 
-**Tärkeä periaate:**
-Jos käytät **ehtolauseita** (`if`) tai vertailuja päivämäärien / aikojen kanssa, **älä vertaile raakatekstiä**, vaan käytä **oikeita tietotyyppejä** (`datetime`, `date`).
+**Tärkeä periaate:** Jos käytät **ehtolauseita** (`if`) tai vertailuja päivämäärien / aikojen kanssa, **älä vertaile raakatekstiä**, vaan käytä **oikeita tietotyyppejä** (`datetime`, `date`).
 
 ❌ Huono tapa (merkkijonovertailu):
 
@@ -136,6 +137,8 @@ Jos käytät **ehtolauseita** (`if`) tai vertailuja päivämäärien / aikojen k
 if aika_str[:10] == "2025-10-13":
     ...
 ```
+
+---
 
 ✅ Parempi tapa:
 
@@ -190,7 +193,7 @@ Ohjelmassa tulee käyttää ainakin:
 * **Ehtolauseita** (`if`) – erityisesti:
 
   * päivien ryhmittelyyn / valintaan
-  * mahdollisesti ”erityispäivän” korostamiseen (esim. pienin nettokulutus)
+  * **mahdollisesti** ”erityispäivän” korostamiseen (esim. pienin nettokulutus)
 * **Funktioita**, joissa on:
 
   * docstring

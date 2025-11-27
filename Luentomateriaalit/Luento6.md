@@ -69,14 +69,14 @@ Kun ymmärrämme mitä haluamme tehdä, mietimme **Miten tämän voisi ratkaista
 **Esimerkiksi projektissamme:**
 
 * On CSV-tiedosto (esim. tuntikohtaista dataa)
-* Tavoitteenamme on tehdä **kuukausitasoisia yhteenvetoja**
+* Tavoitteenamme on tehdä **viikkotasoisia yhteenvetoja**
 * Meidän täytyy siis:
 
   1. Lukea tiedosto rivi riviltä
   2. Erotella sarakkeet
-  3. Poimia päivämäärästä kuukausi
+  3. Poimia viikko päivämääristä
   4. Muuntaa numerot oikeiksi numeroiksi
-  5. Laskea kuukausikohtaiset summat
+  5. Laskea päiväkohtaiset summat
   6. Tulostaa tulos
 
 > **👉 Tästä syntyy kuin pieni kartta tai resepti.**
@@ -107,7 +107,7 @@ Aivan kuten kokki tarvitsee veitsen ja pannun, ohjelmoija tarvitsee mm.:
 * Pythonin 🐍 → **Ohjelmointikielen**
 * Visual Studio Coden 🧰 → **Ohjelmointiympäristön (IDE)**
 * Projektikansion 📁 → **Ohjelma perustuu tiedostoihin**
-* Tiedoston `2025.csv` → **Datan**
+* Tiedoston `viikko42.csv` → **Datan**
 
 Tässä vaiheessa testataan myös, että kaikki toimii:
 
