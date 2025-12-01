@@ -1,7 +1,7 @@
 > [!NOTE]
 > Materiaali on luotu ChatGPT:n ja Copilotin avulla.
 
-# 📥 Inputit osana ohjelmointia – yleinen katsaus
+# 📥 Inputit osana ohjelmointia
 
 ## 🧠 Miksi ohjelmissa tarvitaan inputteja?
 
