@@ -317,7 +317,7 @@ Palauta:
 
 1. **Linkki GitHub-repoon**, jossa on:
 
-   * Python-kooditiedosto (esim. `viikko5_tehtava_c.py`)
+   * Python-kooditiedosto (esim. `viikko5_tehtava_c.py`) kansiossa `viikko5`
    * viimeisin ohjelman generoima `raportti.txt`
 
 2. **Kuvankaappaus** VS Coden terminaalista tai hakemistorakenteesta, josta näkyy:
