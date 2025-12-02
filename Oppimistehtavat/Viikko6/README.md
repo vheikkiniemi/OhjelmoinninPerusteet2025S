@@ -1,7 +1,7 @@
 > [!NOTE]
 > Materiaali on luotu ChatGPT:n ja Copilotin avulla
 
-# Viikko 6: Vuoden 2025 sähkönkulutus interaktiivisena raporttina
+# Viikko 6: Vuoden sähkönkulutuksen raportointi
 
 Tehtävänäsi on laatia Python-ohjelma, joka:
 
