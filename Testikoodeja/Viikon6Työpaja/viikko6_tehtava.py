@@ -20,12 +20,9 @@ def muunna_tiedot(tietue: list) -> list:
     """
     return [
         datetime.fromisoformat(tietue[0]),
-        int(tietue[1]),
-        int(tietue[2]),
-        int(tietue[3]),
-        int(tietue[4]),
-        int(tietue[5]),
-        int(tietue[6]),
+        float(tietue[1].replace(",", ".")),
+        float(tietue[2].replace(",", ".")),
+        float(tietue[3].replace(",", ".")),
     ]
 
 def lue_data(tiedoston_nimi: str) -> list:
@@ -50,10 +47,27 @@ def lue_data(tiedoston_nimi: str) -> list:
 
     return tietokanta
 
+def raportti_tiedostoon(raportti: str):
+    """
+    Kirjoittaa annetun sisällön tiedostoon
+
+    Parametrit:
+     raportti (str): raporttiteksti
+    """
+    with open("raportti.txt", "w", encoding="utf-8") as f:
+        f.write(raportti)
+
+def raportti_aikavali(alkupaiva: datetime.date, loppupaiva: datetime.date, tietokanta: list) -> str:
+    return True
+
 def main():
     """
     Ohjelman pääfunktio: kysyys käyttäjältä inputteja ja tulostaa/vie tiedostoon raportteja
     """
+    # Luetaan data tiedostosta
+    kulutusTuotanto2025 = lue_data("2025.csv")
+    #print(len(kulutusTuotanto2025))
+
     while True:
         print("Valitse raporttityyppi:")
         print("1) Päiväkohtainen yhteenveto aikaväliltä")
@@ -64,10 +78,10 @@ def main():
         if ensimmainen_valinta == 1:
             alkupaiva = input("Anna alkupäivä (pv.kk.vvvv): ")
             loppupaiva = input("Anna loppupäivä (pv.kk.vvvv): ")
-            print("raportti aikaväliltä tulostuu...")
+            print(kulutusTuotanto2025[0])
         elif ensimmainen_valinta == 2:
             kuukausi = input("Anna kuukauden numero (1–12): ")
-            print("kuukausiraportti tulostuu...")
+            print(kulutusTuotanto2025[1])
         elif ensimmainen_valinta == 3:
             print("vuosiraportti tulostuu...")
         elif ensimmainen_valinta == 4:
@@ -83,7 +97,7 @@ def main():
         print("3) Lopeta")
         toinen_valinta = int(input("Anna valinta (numero 1-3): "))
         if toinen_valinta == 1:
-            print("raportti kirjoitetaan tiedostoon...")
+            raportti_tiedostoon(str(kulutusTuotanto2025[0][1]))
         elif toinen_valinta == 2:
             continue
         elif toinen_valinta == 3:
