@@ -8,7 +8,6 @@
 
 from datetime import datetime, date, timedelta
 
-
 def muunna_tiedot(tietue: list) -> list:
     """
     Muuttaa jokaisen annetun tietorivin tietotyypit oikeiksi
@@ -81,6 +80,7 @@ def raportti_aikavali(
     tuotanto = 0
     lampotila = 0
 
+
     for paiva in tietokanta:
         if alku <= paiva[0].date() <= loppu:
             kulutus += paiva[1]
@@ -110,22 +110,62 @@ def raportti_kk(kuukausi: int, tietokanta: list) -> str:
     """
     kuukaudet = ["Tammikuu", "Helmikuu", "Maaliskuu", "Huhtikuu", "Toukokuu", "Kesäkuu", "Heinäkuu", "Elokuu", "Syyskuu", "Lokakuu", "Marraskuu", "Joulukuu"]
     raportti = "-----------------------------------------------------\n"
-    raportti += f"Raportti kuulta: {kuukaudet[kuukausi+1]} \n"
+    raportti += f"Raportti kuulta: {kuukaudet[kuukausi-1]} \n"
     kulutus = 0
     tuotanto = 0
     lampotila = 0
+    paivien_lkm = 0
 
     for paiva in tietokanta:
         if paiva[0].date().month == kuukausi:
             kulutus += paiva[1]
             tuotanto += paiva[2]
             lampotila += paiva[3]
+            paivien_lkm += 1
 
     raportti += "- Kokonaiskulutus: " + f"{kulutus:.2f}".replace(".", ",") + " kWh\n"
     raportti += "- Kokonaistuotanto: " + f"{tuotanto:.2f}".replace(".", ",") + " kWh\n"
+
+
     raportti += (
         "- Keskilämpötila: "
-        + f"{(lampotila/((loppu - alku).days*24)):.2f}".replace(".", ",")
+        + f"{(lampotila/(paivien_lkm*24)):.2f}".replace(".", ",")
+        + " °C\n"
+    )
+    raportti += "-----------------------------------------------------\n"
+    return raportti
+
+def raportti_vuosi(tietokanta: list) -> str:
+    """
+    Raporttiin tulostetaan:
+    * Kuukausi
+    * Kuukauden kokonaiskulutus (kWh)
+    * Kuukauden kokonaistuotanto (kWh)
+    * Kuukauden keskimääräinen vuorokauden lämpötila
+
+    Parametrit:
+     raportti (str): raporttiteksti
+    """
+    raportti = "-----------------------------------------------------\n"
+    raportti += f"Raportti vuodelta: {tietokanta[0][0].date().year} \n"
+    kulutus = 0
+    tuotanto = 0
+    lampotila = 0
+    paivien_lkm = 0
+
+    for paiva in tietokanta:
+        kulutus += paiva[1]
+        tuotanto += paiva[2]
+        lampotila += paiva[3]
+        paivien_lkm += 1
+
+    raportti += "- Kokonaiskulutus: " + f"{kulutus:.2f}".replace(".", ",") + " kWh\n"
+    raportti += "- Kokonaistuotanto: " + f"{tuotanto:.2f}".replace(".", ",") + " kWh\n"
+
+
+    raportti += (
+        "- Keskilämpötila: "
+        + f"{(lampotila/(paivien_lkm*24)):.2f}".replace(".", ",")
         + " °C\n"
     )
     raportti += "-----------------------------------------------------\n"
@@ -229,26 +269,22 @@ def main():
         if paavalikko[1] == 1:
             raportti = raportti_aikavali(paavalikko[2], paavalikko[3], kulutusTuotanto2025)
             print(raportti)
-            alavalikko = valikot(False, True)
-            if alavalikko[1] == 1:
-                raportti_tiedostoon(raportti)
-                continue
-            elif alavalikko[1] == 2:
-                continue
-            elif alavalikko[1] == 3:
-                break
         elif paavalikko[1] == 2:
             raportti = raportti_kk(paavalikko[2], kulutusTuotanto2025)
             print(raportti)
-            alavalikko = valikot(False, True)
-            if alavalikko[1] == 1:
-                raportti_tiedostoon(raportti)
-                continue
-            elif alavalikko[1] == 2:
-                continue
-            elif alavalikko[1] == 3:
-                break
+        elif paavalikko[1] == 3:
+            raportti = raportti_vuosi(kulutusTuotanto2025)
+            print(raportti)
         elif paavalikko[1] == 4:
+            break
+
+        alavalikko = valikot(False, True)
+        if alavalikko[1] == 1:
+            raportti_tiedostoon(raportti)
+            continue
+        elif alavalikko[1] == 2:
+            continue
+        elif alavalikko[1] == 3:
             break
 
 

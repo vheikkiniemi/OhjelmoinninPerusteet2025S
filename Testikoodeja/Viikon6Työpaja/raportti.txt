@@ -1,5 +1,6 @@
 -----------------------------------------------------
-Raportti väliltä 1.1.2025-1.3.2025
-- Kokonaiskulutus: 2947,32 kWh
-- Kokonaistuotanto: 7,11 kWh
-- Keskilämpötila: -2,41 °C
+Raportti vuodelta: 2025 
+- Kokonaiskulutus: 7396,84 kWh
+- Kokonaistuotanto: 2922,38 kWh
+- Keskilämpötila: 0,33 °C
+-----------------------------------------------------
