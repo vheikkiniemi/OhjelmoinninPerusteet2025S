@@ -13,7 +13,7 @@ def muunna_tiedot(tietue: list) -> list:
     Muuttaa jokaisen annetun tietorivin tietotyypit oikeiksi
 
     Parametrit:
-     tietue: Sisältää 7 kenttää, joista ensimmäinen date -> loput int
+     tietue: Sisältää 4 kenttää, joista ensimmäinen date -> loput float
 
     Palautus:
      Listan, jossa muutetut tietotyypit
