@@ -11,7 +11,7 @@ Tehtävän tavoitteena on harjoitella:
 
 > [!NOTE]  
 > Suositus on käyttää **sanakirjaa (`dict`)**.
-> Vaihtoehtoisesti voit tehdä version **olioilla (`class Varaus`)**, jos haluat haastetta.
+> Vaihtoehtoisesti voit tehdä version **olioilla (`class Varaus`)**, jos haluat haastetta.  
 > **VAHVA SUOSITUS:** Käytä tekoälyä kaverina (koska niin myös oikeasti tällaisissa tehtäisiin) 
 
 ---
