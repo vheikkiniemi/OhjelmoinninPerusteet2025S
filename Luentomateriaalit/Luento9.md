@@ -27,7 +27,7 @@ Dictionary on erinomainen valinta, kun haluat:
 
 **✔️ Nopea haku**
 
-Haku on yleensä **O(1)** — erittäin nopea.
+Haku on yleensä **O(1)** → erittäin nopea.
 
 ---
 
