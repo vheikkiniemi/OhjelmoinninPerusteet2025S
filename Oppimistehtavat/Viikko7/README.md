@@ -70,7 +70,7 @@ varaus = {
 }
 ```
 
-Käyttö esimerkki:
+**Käyttöesimerkki:**
 
 ```python
 if varaus["vahvistettu"]:
@@ -111,7 +111,7 @@ class Varaus:
         return self.kesto * self.hinta
 ```
 
-Käyttö esimerkki:
+**Käyttöesimerkki:**
 
 ```python
 if varaus.is_confirmed():
