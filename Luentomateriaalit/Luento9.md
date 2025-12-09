@@ -269,7 +269,7 @@ squares = {x: x*x for x in range(5)}
 
 ---
 
-## 🧰 Käytännön miniprojekti: käyttäjän tallennus
+## 🧰 Esimerkki: Käyttäjän tallennus
 
 ```python
 def create_user(name, email, age):
