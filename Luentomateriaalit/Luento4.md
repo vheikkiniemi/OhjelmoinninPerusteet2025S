@@ -1,7 +1,7 @@
-# 💡 Pythonin virallinen tyyliopas → PEP 8
-
 > [!NOTE]
 > Materiaali on luotu ChatGPT:n ja Copilotin avulla.
+
+# 💡 Pythonin virallinen tyyliopas → PEP 8
 
 [PEP 8](https://peps.python.org/pep-0008/) on Pythonin virallinen *style guide*, joka määrittelee, miten Python-koodi tulisi kirjoittaa, jotta se olisi selkeää, luettavaa ja yhtenäistä. Oppaan tarkoitus on helpottaa yhteistyötä, vähentää virheitä ja tehdä koodista ammattimaisempaa.
 
@@ -213,6 +213,7 @@ print(fruits[2])  # cherry
 ```
 
 ---
+
 **💡 Viimeinen alkio:**
 
 ```python

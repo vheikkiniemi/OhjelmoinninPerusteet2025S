@@ -1,7 +1,7 @@
-# 🐍 Silmukat Pythonissa
-
 > [!NOTE]
 > Materiaali on luotu ChatGPT:n ja Copilotin avulla.
+
+# 🐍 Silmukat Pythonissa
 
 ## 🔁 Mikä on silmukka?
 
@@ -127,6 +127,7 @@ for u in users:
 else:
     print("Adminia ei löytynyt.")
 ```
+
 ---
 
 Jos jonkin alkion sisältö on tyhjä:
@@ -575,7 +576,6 @@ def tulosta_lista():
     lista = ["omena", "banaani", "päärynä", "kiivi"]
     print("Hedelmät: ", end="")
     print("-".join(lista))
-
 
 def main():
     tulosta_lista()

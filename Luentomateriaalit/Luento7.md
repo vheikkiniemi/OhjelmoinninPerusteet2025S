@@ -300,6 +300,8 @@ if log_path.exists():
 else:
     mode = "w"
 
+# TOIMII MYÖS: mode = "a" if log_path.exists() else "w"
+
 with open(log_path, mode, encoding="utf-8") as f:
     f.write("New log line\n")
 ```
@@ -668,7 +670,7 @@ Config-tiedostot, pienet datasetit, data-analytiikan tuonti/vienti.
 
 ## 🧠 Yhteenveto
 
-Tiedosto on vain **yksi tapa** säilyttää tietoa. Kun datamäärä, monimutkaisuus tai sovelluksen vaatimukset kasvavat, käyttöjärjestelmän tasolla oleva tiedosto ei enää riitä — tarvitaan datapalvelu, joka tarjoaa:
+Tiedosto on vain **yksi tapa** säilyttää tietoa. Kun datamäärä, monimutkaisuus tai sovelluksen vaatimukset kasvavat, käyttöjärjestelmän tasolla oleva tiedosto ei enää riitä → tarvitaan datapalvelu, joka tarjoaa:
 
 * paremmat haut
 * datan eheyden
