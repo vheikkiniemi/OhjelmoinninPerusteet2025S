@@ -8,6 +8,7 @@
 
 from datetime import datetime, date, timedelta
 
+
 def muunna_tiedot(tietue: list) -> list:
     """
     Muuttaa jokaisen annetun tietorivin tietotyypit oikeiksi
@@ -24,6 +25,7 @@ def muunna_tiedot(tietue: list) -> list:
         float(tietue[2].replace(",", ".")),
         float(tietue[3].replace(",", ".")),
     ]
+
 
 def lue_data(tiedoston_nimi: str) -> list:
     """
@@ -47,6 +49,7 @@ def lue_data(tiedoston_nimi: str) -> list:
 
     return tietokanta
 
+
 def raportti_tiedostoon(raportti: str):
     """
     Kirjoittaa annetun sisällön tiedostoon
@@ -57,16 +60,26 @@ def raportti_tiedostoon(raportti: str):
     with open("raportti.txt", "w", encoding="utf-8") as f:
         f.write(raportti)
 
+
 def raportti_aikavali(alkupaiva: str, loppupaiva: str, tietokanta: list) -> str:
-    #print(alkupaiva, loppupaiva)
-    #date1 = datetime(2022, 12, 25)
-    alkupv = int(alkupaiva.split('.')[0])
-    alkukk = int(alkupaiva.split('.')[1])
-    alkuvv = int(alkupaiva.split('.')[2])
+    """
+    Luo raportin aikaväliltä
+
+    Parametrit:
+     alkupaiva (str): aikavälin aloituspäivä
+     loppupaiva (str): aikavälin lopetuspäivä
+     tietokanta (list): sisältää kaikki tietueet
+
+    Palautus:
+     raportti (lst): palauttaa luodun raportin
+    """
+    alkupv = int(alkupaiva.split(".")[0])
+    alkukk = int(alkupaiva.split(".")[1])
+    alkuvv = int(alkupaiva.split(".")[2])
     alku = date(alkuvv, alkukk, alkupv)
-    loppupv = int(loppupaiva.split('.')[0])
-    loppukk = int(loppupaiva.split('.')[1])
-    loppuvv = int(loppupaiva.split('.')[2])
+    loppupv = int(loppupaiva.split(".")[0])
+    loppukk = int(loppupaiva.split(".")[1])
+    loppuvv = int(loppupaiva.split(".")[2])
     loppu = date(loppuvv, loppukk, loppupv)
     kulutus = 0
     tuotanto = 0
@@ -87,13 +100,86 @@ def raportti_aikavali(alkupaiva: str, loppupaiva: str, tietokanta: list) -> str:
     raportti += "---------------------------------------------------------\n"
     return raportti
 
+
+def raportti_kuukausi(kuukausi: str, tietokanta: list) -> str:
+    """
+    Luo kuukausiraportin
+
+    Parametrit:
+     kuukausi (str): pyydetty kuukausi
+     tietokanta (list): sisältää kaikki tietueet
+
+    Palautus:
+     raportti (lst): palauttaa luodun raportin
+    """
+    kuukaudet = [
+        "Tammikuu",
+        "Helmikuu",
+        "Maaliskuu",
+        "Huhtikuu",
+        "Toukokuu",
+        "Kesäkuu",
+        "Heinäkuu",
+        "Elokuu",
+        "Syyskuu",
+        "Lokakuu",
+        "Marraskuu",
+        "Joulukuu",
+    ]
+    kk = int(kuukausi)
+    kulutus = 0
+    tuotanto = 0
+    lampotila = 0
+    tietue_lkm = 0
+    for tietue in tietokanta:
+        if tietue[0].date().month == kk:
+            kulutus += tietue[1]
+            tuotanto += tietue[2]
+            lampotila += tietue[3]
+            tietue_lkm += 1
+
+    raportti = "---------------------------------------------------------\n"
+    raportti += f"Raportti kuukaudelta: {kuukaudet[kk-1]}\n"
+    raportti += f"- kokonaiskulutus: {kulutus:.2f} kWh\n".replace(".", ",")
+    raportti += f"- kokonaistuotanto: {tuotanto:.2f} kWh\n".replace(".", ",")
+    raportti += f"- keskilämpötila: {lampotila/tietue_lkm:.2f} °C\n".replace(".", ",")
+    raportti += "---------------------------------------------------------\n"
+    return raportti
+
+def raportti_vuosi(tietokanta: list) -> str:
+    """
+    Luo vuosiraportin
+
+    Parametrit:
+     tietokanta (list): sisältää kaikki tietueet
+
+    Palautus:
+     raportti (lst): palauttaa luodun raportin
+    """
+    kulutus = 0
+    tuotanto = 0
+    lampotila = 0
+    tietue_lkm = 0
+    for tietue in tietokanta:
+        kulutus += tietue[1]
+        tuotanto += tietue[2]
+        lampotila += tietue[3]
+        tietue_lkm += 1
+
+    raportti = "---------------------------------------------------------\n"
+    raportti += f"Raportti vuodelta 2025\n"
+    raportti += f"- kokonaiskulutus: {kulutus:.2f} kWh\n".replace(".", ",")
+    raportti += f"- kokonaistuotanto: {tuotanto:.2f} kWh\n".replace(".", ",")
+    raportti += f"- keskilämpötila: {lampotila/tietue_lkm:.2f} °C\n".replace(".", ",")
+    raportti += "---------------------------------------------------------\n"
+    return raportti
+
 def main():
     """
     Ohjelman pääfunktio: kysyys käyttäjältä inputteja ja tulostaa/vie tiedostoon raportteja
     """
     # Luetaan data tiedostosta
     kulutusTuotanto2025 = lue_data("2025.csv")
-    #print(len(kulutusTuotanto2025))
 
     while True:
         print("Valitse raporttityyppi:")
@@ -109,16 +195,17 @@ def main():
             print(raportti)
         elif ensimmainen_valinta == 2:
             kuukausi = input("Anna kuukauden numero (1–12): ")
-            print(kulutusTuotanto2025[1])
+            raportti = raportti_kuukausi(kuukausi, kulutusTuotanto2025)
+            print(raportti)
         elif ensimmainen_valinta == 3:
-            print("vuosiraportti tulostuu...")
+            raportti = raportti_vuosi(kulutusTuotanto2025)
+            print(raportti)
         elif ensimmainen_valinta == 4:
             print("Lopetaan ohjelma...")
             break
         else:
             continue
 
-        #print("---------------------------------------------------------")
         print("Mitä haluat tehdä seuraavaksi?")
         print("1) Kirjoita raportti tiedostoon raportti.txt")
         print("2) Luo uusi raportti")
@@ -137,7 +224,7 @@ def main():
 
         print("---------------------------------------------------------")
 
-    #print("Valitsit ", ensimmainen_valinta)
+    # print("Valitsit ", ensimmainen_valinta)
 
 
 if __name__ == "__main__":
