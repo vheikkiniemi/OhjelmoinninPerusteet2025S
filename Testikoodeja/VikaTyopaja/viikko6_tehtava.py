@@ -6,8 +6,7 @@
 #
 # See LICENSE file in the project root for full license information.
 
-from datetime import datetime, date, timedelta
-
+from datetime import datetime, date
 
 def muunna_tiedot(tietue: list) -> list:
     """
@@ -223,9 +222,6 @@ def main():
             continue
 
         print("---------------------------------------------------------")
-
-    # print("Valitsit ", ensimmainen_valinta)
-
 
 if __name__ == "__main__":
     main()
