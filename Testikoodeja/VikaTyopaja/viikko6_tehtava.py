@@ -57,8 +57,35 @@ def raportti_tiedostoon(raportti: str):
     with open("raportti.txt", "w", encoding="utf-8") as f:
         f.write(raportti)
 
-def raportti_aikavali(alkupaiva: datetime.date, loppupaiva: datetime.date, tietokanta: list) -> str:
-    return True
+def raportti_aikavali(alkupaiva: str, loppupaiva: str, tietokanta: list) -> str:
+    #print(alkupaiva, loppupaiva)
+    #date1 = datetime(2022, 12, 25)
+    alkupv = int(alkupaiva.split('.')[0])
+    alkukk = int(alkupaiva.split('.')[1])
+    alkuvv = int(alkupaiva.split('.')[2])
+    alku = date(alkuvv, alkukk, alkupv)
+    loppupv = int(loppupaiva.split('.')[0])
+    loppukk = int(loppupaiva.split('.')[1])
+    loppuvv = int(loppupaiva.split('.')[2])
+    loppu = date(loppuvv, loppukk, loppupv)
+    kulutus = 0
+    tuotanto = 0
+    lampotila = 0
+    tietue_lkm = 0
+    for tietue in tietokanta:
+        if alku <= tietue[0].date() <= loppu:
+            kulutus += tietue[1]
+            tuotanto += tietue[2]
+            lampotila += tietue[3]
+            tietue_lkm += 1
+
+    raportti = "---------------------------------------------------------\n"
+    raportti += f"Raportti aikaväliltä {alkupaiva}-{loppupaiva}\n"
+    raportti += f"- kokonaiskulutus: {kulutus:.2f} kWh\n".replace(".", ",")
+    raportti += f"- kokonaistuotanto: {tuotanto:.2f} kWh\n".replace(".", ",")
+    raportti += f"- keskilämpötila: {lampotila/tietue_lkm:.2f} °C\n".replace(".", ",")
+    raportti += "---------------------------------------------------------\n"
+    return raportti
 
 def main():
     """
@@ -78,7 +105,8 @@ def main():
         if ensimmainen_valinta == 1:
             alkupaiva = input("Anna alkupäivä (pv.kk.vvvv): ")
             loppupaiva = input("Anna loppupäivä (pv.kk.vvvv): ")
-            print(kulutusTuotanto2025[0])
+            raportti = raportti_aikavali(alkupaiva, loppupaiva, kulutusTuotanto2025)
+            print(raportti)
         elif ensimmainen_valinta == 2:
             kuukausi = input("Anna kuukauden numero (1–12): ")
             print(kulutusTuotanto2025[1])
@@ -90,14 +118,15 @@ def main():
         else:
             continue
 
-        print("---------------------------------------------------------")
+        #print("---------------------------------------------------------")
         print("Mitä haluat tehdä seuraavaksi?")
         print("1) Kirjoita raportti tiedostoon raportti.txt")
         print("2) Luo uusi raportti")
         print("3) Lopeta")
         toinen_valinta = int(input("Anna valinta (numero 1-3): "))
         if toinen_valinta == 1:
-            raportti_tiedostoon(str(kulutusTuotanto2025[0][1]))
+            raportti_tiedostoon(raportti)
+            print("Raportti kirjoitettu tiedostoon.")
         elif toinen_valinta == 2:
             continue
         elif toinen_valinta == 3:
