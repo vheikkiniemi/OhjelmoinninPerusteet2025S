@@ -116,6 +116,7 @@ print("Hei", nimi)
   <input type="number" name="age">
   <button type="submit">Send</button>
   ```
+
 * Data lähetetään palvelimelle:
 
   * **GET**-parametreina
@@ -270,6 +271,7 @@ Tällä opintojaksolla
   * ne ovat yksinkertaisia
   * ne paljastavat ohjelmoinnin perusrakenteet
   * ne vahvistavat ajattelutaitoja: ehto, silmukka, virheenkäsittely, validointi
+
 * Myöhemmin opinnnoissa:
 
   * web-lomakkeet
@@ -316,7 +318,6 @@ return f"Hei {nimi}"
 🟩 Ajatus on sama → Vain **käyttöliittymä ja datan kulkureitti muuttuvat**.
 
 ---
-
 
 # 🧲 Pythonin `input`-syötteiden käyttö
 
