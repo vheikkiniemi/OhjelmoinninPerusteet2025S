@@ -9,7 +9,7 @@ Tehtävän tavoitteena on harjoitella:
 
 * tietotyyppimuunnoksia Pythonisssa käyttäen erillistä funkiota
 * listojen käsittelyä ja varausdatan rakenteistamista
-* varausdatan tulostamista käyttäen silmuikoita ja ehtolauseita
+* varausdatan tulostamista käyttäen silmukoita ja ehtolauseita
 
 > [!NOTE]
 > Halutessa työn voi tehdä **`pareittain (max. kaksi)`**. Tällöin kohdassa [Palautusohje Itslearningiin](#-palautusohje-itslearningiin) pari tekee vain yhden palautuksen, johon on yhdistetty molemmat.
